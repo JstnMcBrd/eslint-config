@@ -35,6 +35,6 @@ export function javascript(): Linter.FlatConfig[] {
 				'no-var': 'error',
 				'prefer-const': 'error',
 			},
-		}
+		},
 	];
 }
