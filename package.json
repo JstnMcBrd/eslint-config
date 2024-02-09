@@ -1,0 +1,49 @@
+{
+	"name": "@jstnmcbrd/eslint-config",
+	"version": "0.0.0",
+	"description": "Justin's ESLint configuration",
+	"keywords": [
+		"eslint",
+		"eslintconfig",
+		"eslint-config"
+	],
+	"homepage": "https://github.com/JstnMcBrd/eslint-config",
+	"bugs": "https://github.com/JstnMcBrd/eslint-config/issues",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JstnMcBrd/eslint-config.git"
+	},
+	"license": "ISC",
+	"author": "Justin McBride",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"lint": "eslint .",
+		"test": "echo \"No tests\""
+	},
+	"dependencies": {
+		"@eslint/js": "^8.56.0",
+		"@stylistic/eslint-plugin": "^1.6.1",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"@typescript-eslint/parser": "^6.21.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"globals": "^13.24.0"
+	},
+	"devDependencies": {
+		"@types/eslint__js": "^8.42.3",
+		"eslint": "^8.56.0",
+		"typescript": "^5.3.3"
+	},
+	"peerDependencies": {
+		"eslint": ">=8.21.0"
+	},
+	"engines": {
+		"node": "^12.22.0 || ^14.17.0 || >=15.3.0"
+	}
+}

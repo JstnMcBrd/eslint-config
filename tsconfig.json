@@ -1,0 +1,23 @@
+{
+	"include": ["src"],
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "NodeNext",
+		"outDir": "dist",
+		"declaration": true,
+		"strict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"verbatimModuleSyntax": true,
+
+		// For the globals package
+		"resolveJsonModule": true,
+
+		// Until @stylistic/eslint-plugin fixes its types
+		// Also means src/@types/* gets ignored, so comment this to test it
+		"skipLibCheck": true,
+	},
+}
