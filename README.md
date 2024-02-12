@@ -1,5 +1,9 @@
 # @jstnmcbrd/eslint-config
 
+[![npm package](https://badge.fury.io/js/@jstnmcbrd%2Feslint-config.svg)](https://badge.fury.io/js/@jstnmcbrd%2Feslint-config)
+
+## About
+
 A simple [ESLint](https://eslint.org/) configuration for JavaScript, [TypeScript](https://www.typescriptlang.org/), and [React](https://react.dev/) projects.
 
 Uses [@eslint/js](https://www.npmjs.com/package/@eslint/js), [@stylistic/eslint-plugin](https://www.npmjs.com/package/@stylistic/eslint-plugin), [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin), [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react), and [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) configurations.
@@ -37,6 +41,13 @@ import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig();
 ```
 
+#### React
+
+```js
+import eslintConfig from '@jstnmcbrd/eslint-config';
+export default eslintConfig({ react: true });
+```
+
 #### TypeScript
 
 ```js
@@ -48,18 +59,11 @@ This configuration assumes you are using a `@typescript-eslint` setup with a `ts
 
 A good example can be found in this repository ([tsconfig.eslint.json](./tsconfig.eslint.json)).
 
-#### React
-
-```js
-import eslintConfig from '@jstnmcbrd/eslint-config';
-export default eslintConfig({ react: true });
-```
-
 #### React + TypeScript
 
 ```js
 import eslintConfig from '@jstnmcbrd/eslint-config';
-export default eslintConfig({ typescript: true, react: true });
+export default eslintConfig({ react: true, typescript: true });
 ```
 
 ## Design
