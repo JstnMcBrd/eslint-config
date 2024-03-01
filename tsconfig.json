@@ -15,9 +15,5 @@
 
 		// For the globals package
 		"resolveJsonModule": true,
-
-		// Until @stylistic/eslint-plugin fixes its types
-		// Also means src/@types/* gets ignored, so comment this to test it
-		"skipLibCheck": true,
 	},
 }
