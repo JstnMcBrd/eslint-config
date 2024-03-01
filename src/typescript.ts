@@ -23,12 +23,12 @@ export function typescript(): Linter.FlatConfig[] {
 			},
 			rules: {
 				// Recommended
+				...tsESLint.configs.eslintRecommended.rules,
 				...tsESLint.configs.strictTypeChecked[2]?.rules,
 				...tsESLint.configs.stylisticTypeChecked[2]?.rules,
 
 				// Overrides
 				'no-shadow': 0, // handled by TypeScript
-				'no-undef': 0, // handled by TypeScript
 			},
 		},
 	];
