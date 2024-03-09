@@ -1,6 +1,6 @@
 # @jstnmcbrd/eslint-config
 
-[![npm package](https://badge.fury.io/js/@jstnmcbrd%2Feslint-config.svg)](https://badge.fury.io/js/@jstnmcbrd%2Feslint-config)
+[![NPM Version](https://img.shields.io/npm/v/@jstnmcbrd/eslint-config)](https://www.npmjs.com/package/@jstnmcbrd/eslint-config)
 
 ## About
 
