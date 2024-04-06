@@ -63,7 +63,7 @@ import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig({ typescript: true });
 ```
 
-This configuration assumes you are using a `@typescript-eslint` setup with a `tsconfig.eslint.json` file, as recommended by the [documentation](https://typescript-eslint.io/linting/typed-linting/monorepos/#one-root-tsconfigjson) (see there for more details).
+This configuration assumes you are using a `typescript-eslint` setup with a `tsconfig.eslint.json` file, as recommended by the [documentation](https://typescript-eslint.io/linting/typed-linting/monorepos/#one-root-tsconfigjson) (see there for more details).
 
 A good example can be found in this repository ([tsconfig.eslint.json](./tsconfig.eslint.json)).
 
