@@ -23,8 +23,7 @@
 	],
 	"scripts": {
 		"build": "tsc",
-		"lint": "eslint .",
-		"test": "echo \"No tests\""
+		"lint": "eslint ."
 	},
 	"dependencies": {
 		"@eslint/js": "^8.57.0",
