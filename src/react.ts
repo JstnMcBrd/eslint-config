@@ -36,10 +36,6 @@ export function react(): Linter.FlatConfig[] {
 				...reactPlugin.configs['recommended']?.rules,
 				...reactPlugin.configs['jsx-runtime']?.rules,
 				...reactHooksPlugin.configs['recommended']?.rules,
-
-				// Overrides
-				'@stylistic/jsx-indent': ['error', 'tab'],
-				'@stylistic/jsx-indent-props': ['error', 'tab'],
 			},
 		},
 	];
