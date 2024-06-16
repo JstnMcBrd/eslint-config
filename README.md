@@ -80,6 +80,7 @@ export default eslintConfig({ react: true, typescript: true });
 
 - Uses the new ESLint [flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new)
 - No support for the legacy config, so consider upgrading!
+- ESLint v9 is not supported [yet](https://github.com/JstnMcBrd/eslint-config/issues/10)
 
 #### ECMAScript
 
