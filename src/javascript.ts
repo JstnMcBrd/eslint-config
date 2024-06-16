@@ -21,14 +21,10 @@ export function javascript(): Linter.FlatConfig[] {
 			rules: {
 				// Recommended
 				...js.configs.recommended.rules,
-				...stylistic.configs['recommended-flat'].rules,
-
-				// Overrides
-				'@stylistic/indent': ['error', 'tab'],
-				'@stylistic/indent-binary-ops': ['error', 'tab'],
-				'@stylistic/no-tabs': 0,
-				'@stylistic/semi': ['error', 'always'],
-				'@stylistic/member-delimiter-style': 'error',
+				...stylistic.configs.customize({
+					indent: 'tab',
+					semi: true,
+				}).rules,
 
 				// Additions
 				'curly': 'error',
