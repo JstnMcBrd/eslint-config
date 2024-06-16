@@ -27,7 +27,7 @@ export function react(): Linter.FlatConfig[] {
 			settings: {
 				react: {
 					// TODO warns if not set, but will default to 'detect' in the future
-					// https://github.com/jsx-eslint/eslint-plugin-react#configuration
+					// https://github.com/jsx-eslint/eslint-plugin-react/issues/3758
 					version: 'detect',
 				},
 			},

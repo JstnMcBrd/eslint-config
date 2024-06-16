@@ -9,6 +9,7 @@ export function javascript(): Linter.FlatConfig[] {
 		{
 			files: ['**/*.{m,c,}{js,ts}{x,}'],
 			plugins: {
+				// https://github.com/eslint-stylistic/eslint-stylistic/issues/398
 				'@stylistic': stylistic as ESLint.Plugin,
 			},
 			languageOptions: {
