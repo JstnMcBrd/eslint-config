@@ -1,6 +1,6 @@
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import type { ESLint, Linter } from 'eslint';
+import type { Linter } from 'eslint';
 import globals from 'globals';
 
 /** @returns Basic ESLint configuration for JavaScript. */
@@ -9,8 +9,7 @@ export function javascript(): Linter.FlatConfig[] {
 		{
 			files: ['**/*.{m,c,}{js,ts}{x,}'],
 			plugins: {
-				// https://github.com/eslint-stylistic/eslint-stylistic/issues/398
-				'@stylistic': stylistic as ESLint.Plugin,
+				'@stylistic': stylistic,
 			},
 			languageOptions: {
 				globals: globals.nodeBuiltin,
