@@ -27,7 +27,7 @@ export function react(): Linter.FlatConfig[] {
 			settings: {
 				react: {
 					// TODO warns if not set, but will default to 'detect' in the future
-					// https://github.com/jsx-eslint/eslint-plugin-react#configuration
+					// https://github.com/jsx-eslint/eslint-plugin-react/issues/3758
 					version: 'detect',
 				},
 			},
@@ -36,10 +36,6 @@ export function react(): Linter.FlatConfig[] {
 				...reactPlugin.configs['recommended']?.rules,
 				...reactPlugin.configs['jsx-runtime']?.rules,
 				...reactHooksPlugin.configs['recommended']?.rules,
-
-				// Overrides
-				'@stylistic/jsx-indent': ['error', 'tab'],
-				'@stylistic/jsx-indent-props': ['error', 'tab'],
 			},
 		},
 	];

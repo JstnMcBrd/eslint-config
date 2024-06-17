@@ -11,14 +11,18 @@ export function typescript(): Linter.FlatConfig[] {
 		{
 			files: ['**/*.{m,c,}ts{x,}'],
 			plugins: {
+				// https://github.com/typescript-eslint/typescript-eslint/issues/9110
 				'@typescript-eslint': tsESLint.plugin as ESLint.Plugin,
 			},
 			languageOptions: {
+				// https://github.com/typescript-eslint/typescript-eslint/issues/9110
 				parser: tsESLint.parser as Linter.ParserModule,
 				parserOptions: {
 					project: './tsconfig.eslint.json',
-					// TODO use this once it stops being experimental
-					// EXPERIMENTAL_useProjectService: true,
+					// TODO use this once it stops being experimental in v8
+					// https://github.com/typescript-eslint/typescript-eslint/issues/8475#issuecomment-1945510422
+					// https://github.com/typescript-eslint/typescript-eslint/pull/9084
+					// projectService: true,
 				},
 			},
 			rules: {

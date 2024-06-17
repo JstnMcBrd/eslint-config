@@ -1,6 +1,6 @@
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import type { ESLint, Linter } from 'eslint';
+import type { Linter } from 'eslint';
 import globals from 'globals';
 
 /** @returns Basic ESLint configuration for JavaScript. */
@@ -9,7 +9,7 @@ export function javascript(): Linter.FlatConfig[] {
 		{
 			files: ['**/*.{m,c,}{js,ts}{x,}'],
 			plugins: {
-				'@stylistic': stylistic as ESLint.Plugin,
+				'@stylistic': stylistic,
 			},
 			languageOptions: {
 				globals: globals.nodeBuiltin,
@@ -20,14 +20,10 @@ export function javascript(): Linter.FlatConfig[] {
 			rules: {
 				// Recommended
 				...js.configs.recommended.rules,
-				...stylistic.configs['recommended-flat'].rules,
-
-				// Overrides
-				'@stylistic/indent': ['error', 'tab'],
-				'@stylistic/indent-binary-ops': ['error', 'tab'],
-				'@stylistic/no-tabs': 0,
-				'@stylistic/semi': ['error', 'always'],
-				'@stylistic/member-delimiter-style': 'error',
+				...stylistic.configs.customize({
+					indent: 'tab',
+					semi: true,
+				}).rules,
 
 				// Additions
 				'curly': 'error',

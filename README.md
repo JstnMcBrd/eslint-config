@@ -20,9 +20,9 @@ Written in TypeScript and transpiles to JavaScript (ESM).
 
 ## Introduction
 
-I noticed I was duplicating a lot of the same ESLint configuration between my projects, and synchronizing changes between them was annoying. So I decided to extract the configuration into a new package for me to use anywhere.
+I noticed I was duplicating much of the ESLint configuration between my projects, and synchronizing changes was annoying. So I have extracted the configuration into a new package to use anywhere.
 
-You are welcome to use this configuration, but it's mostly designed for my own personal use. While I do plan to follow semantic versioning for handling breaking changes, I cannot promise to support your use case.
+You are welcome to use this configuration, but it is primarily designed for my personal use. I cannot promise to support your use case. However, I do plan to follow semantic versioning for handling breaking changes.
 
 ## Usage
 
@@ -63,7 +63,7 @@ import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig({ typescript: true });
 ```
 
-This configuration assumes you are using a `typescript-eslint` setup with a `tsconfig.eslint.json` file, as recommended by the [documentation](https://typescript-eslint.io/linting/typed-linting/monorepos/#one-root-tsconfigjson) (see there for more details).
+This configuration assumes you have a `typescript-eslint` setup with a `tsconfig.eslint.json` file, as recommended by the [documentation](https://typescript-eslint.io/linting/typed-linting/monorepos/#one-root-tsconfigjson) (see there for more details).
 
 A good example can be found in this repository ([tsconfig.eslint.json](./tsconfig.eslint.json)).
 
@@ -80,6 +80,7 @@ export default eslintConfig({ react: true, typescript: true });
 
 - Uses the new ESLint [flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new)
 - No support for the legacy config, so consider upgrading!
+- ESLint v9 is not supported [yet](https://github.com/JstnMcBrd/eslint-config/issues/10)
 
 #### ECMAScript
 
@@ -106,7 +107,7 @@ export default eslintConfig({ react: true, typescript: true });
 
 This project aspires to abide by [semantic versioning](https://semver.org/). However, given the interesting nature of updating code quality rules, it is not always clear what constitutes a "breaking" change. ESLint has a section on the subject in their [README](https://github.com/eslint/eslint#semantic-versioning-policy).
 
-When I update a rule in a way that could cause a few harmless lint errors, I will try to always bump a minor version. If I update many rules, update a rule in a way that fundamentally changes it, or make a change to the configuration API, I will bump a major version.
+When I update a rule in a way that could cause a few harmless lint errors, I will try to always bump a minor version. If I update many rules, fundamentally change a rule, or change the configuration API, I will bump a major version.
 
 ## Keep-a-changelog
 
