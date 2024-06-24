@@ -32,7 +32,7 @@ export function typescript(): Linter.FlatConfig[] {
 				...tsESLint.configs.stylisticTypeChecked[2]?.rules,
 
 				// Overrides
-				'no-shadow': 0, // handled by TypeScript
+				'no-shadow': 0, // TODO Replace with @typescript-eslint/no-shadow (breaking change)
 			},
 		},
 	];
