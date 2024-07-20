@@ -33,9 +33,9 @@ export function react(): Linter.FlatConfig[] {
 			},
 			rules: {
 				// Recommended
-				...reactHooksPlugin.configs['recommended']?.rules,
 				...reactPlugin.configs.recommended.rules,
 				...reactPlugin.configs['jsx-runtime'].rules,
+				...reactHooksPlugin.configs.recommended.rules,
 			},
 		},
 	];
