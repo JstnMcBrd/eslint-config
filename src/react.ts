@@ -22,7 +22,7 @@ export function react(): Linter.FlatConfig[] {
 				'react-hooks': reactHooksPlugin,
 			},
 			languageOptions: {
-				parserOptions: reactPlugin.configs['recommended']?.parserOptions,
+				parserOptions: reactPlugin.configs.recommended.parserOptions,
 			},
 			settings: {
 				react: {
@@ -33,9 +33,9 @@ export function react(): Linter.FlatConfig[] {
 			},
 			rules: {
 				// Recommended
-				...reactPlugin.configs['recommended']?.rules,
-				...reactPlugin.configs['jsx-runtime']?.rules,
-				...reactHooksPlugin.configs['recommended']?.rules,
+				...reactPlugin.configs.recommended.rules,
+				...reactPlugin.configs['jsx-runtime'].rules,
+				...reactHooksPlugin.configs.recommended.rules,
 			},
 		},
 	];
