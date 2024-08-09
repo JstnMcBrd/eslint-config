@@ -3,14 +3,13 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import type { Linter } from 'eslint';
 import globals from 'globals';
 
-import { javascript } from './javascript.js';
-
 /** @returns ESLint configuration for React. */
 export function react(): Linter.FlatConfig[] {
 	return [
 		// Make sure to give browser globals to all other project files, not just JSX files
 		{
-			files: javascript()[0]?.files,
+			// FIXME Reused code from src/javascript.ts - abstract out
+			files: ['**/*.{m,c,}{js,ts}{x,}'],
 			languageOptions: {
 				globals: globals.browser,
 			},
