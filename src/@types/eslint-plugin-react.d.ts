@@ -1,4 +1,5 @@
 // This is only a type-shim and is not meant to be a perfect representation
+// https://github.com/jsx-eslint/eslint-plugin-react/issues/3776
 
 declare module 'eslint-plugin-react' {
 	import type { ESLint } from 'eslint';
