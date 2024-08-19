@@ -9,7 +9,6 @@ export function typescript(): Linter.FlatConfig[] {
 			ignores: ['dist'],
 		},
 		{
-			files: ['**/*.{m,c,}ts{x,}'],
 			plugins: {
 				// https://github.com/typescript-eslint/typescript-eslint/issues/9110
 				'@typescript-eslint': tsESLint.plugin as ESLint.Plugin,

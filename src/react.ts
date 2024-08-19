@@ -8,14 +8,11 @@ export function react(): Linter.FlatConfig[] {
 	return [
 		// Make sure to give browser globals to all other project files, not just JSX files
 		{
-			// FIXME Reused code from src/javascript.ts - abstract out
-			files: ['**/*.{m,c,}{js,ts}{x,}'],
 			languageOptions: {
 				globals: globals.browser,
 			},
 		},
 		{
-			files: ['**/*.{m,c,}{js,ts}x'],
 			plugins: {
 				'react': reactPlugin,
 				'react-hooks': reactHooksPlugin,
