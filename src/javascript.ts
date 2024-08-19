@@ -10,24 +10,26 @@ export function javascript(): Linter.FlatConfig[] {
 			files: ['**/*.{m,c,}{js,ts}{x,}'],
 		},
 		{
-			plugins: {
-				'@stylistic': stylistic,
-			},
 			languageOptions: {
+				// FIXME What if this is not a node project (like bundling for a browser)?
 				globals: globals.nodeBuiltin,
 			},
 			linterOptions: {
 				reportUnusedDisableDirectives: 'error',
 			},
-			rules: {
-				// Recommended
-				...js.configs.recommended.rules,
-				...stylistic.configs.customize({
-					indent: 'tab',
-					semi: true,
-				}).rules,
+		},
 
-				// Additions
+		// Recommended
+		js.configs.recommended,
+		stylistic.configs.customize({
+			flat: true,
+			indent: 'tab',
+			semi: true,
+		}),
+
+		// Additions
+		{
+			rules: {
 				'curly': 'error',
 				'no-shadow': 'error',
 				'no-var': 'error',

@@ -5,7 +5,9 @@ import { react } from './react.js';
 import { typescript } from './typescript.js';
 
 interface Settings {
+	/** Whether to include lint rules for React projects */
 	react?: boolean;
+	/** Whether to include lint rules for TypeScript projects */
 	typescript?: boolean;
 }
 
