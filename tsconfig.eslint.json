@@ -4,5 +4,6 @@
 	"exclude": [],
 	"compilerOptions": {
 		"noEmit": true,
+		"allowJs": true,
 	},
 }
