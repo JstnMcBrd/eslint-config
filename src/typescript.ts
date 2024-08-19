@@ -9,7 +9,6 @@ export function typescript(): Linter.FlatConfig[] {
 			ignores: ['dist'],
 		},
 		{
-			files: ['**/*.{m,c,}ts{x,}'],
 			plugins: {
 				// https://github.com/typescript-eslint/typescript-eslint/issues/9110
 				'@typescript-eslint': tsESLint.plugin as ESLint.Plugin,
@@ -18,11 +17,25 @@ export function typescript(): Linter.FlatConfig[] {
 				// https://github.com/typescript-eslint/typescript-eslint/issues/9110
 				parser: tsESLint.parser as Linter.ParserModule,
 				parserOptions: {
-					project: './tsconfig.eslint.json',
-					// TODO use this once it stops being experimental in v8
-					// https://github.com/typescript-eslint/typescript-eslint/issues/8475#issuecomment-1945510422
-					// https://github.com/typescript-eslint/typescript-eslint/pull/9084
-					// projectService: true,
+					project: 'tsconfig.eslint.json',
+
+					/**
+					 * In order to use the new projectService feature, we would need to enable default project
+					 * for all files not included in the project's tsconfig. But `typescript-eslint` wants you
+					 * to only include specific files and blocks wide patterns. But we need to include
+					 * arbitrarily wide pattners because this eslint-config could be used in many projects with
+					 * diverse structures, so we cannot know what files to include in advance.
+					 *
+					 * `typescript-eslint` also enforces an 8-file limit, which would not be enough for projects
+					 * with many excluded files - for example, unit test `*.test.ts` files.
+					 *
+					 * Because of these limitations, we cannot use the new projectService feature.
+					 */
+
+					// projectService: {
+					// 	allowDefaultProject: ['**/*.{m,c,}{js,ts}{x,}'],
+					// 	defaultProject: 'tsconfig.json',
+					// },
 				},
 			},
 			rules: {
@@ -31,8 +44,10 @@ export function typescript(): Linter.FlatConfig[] {
 				...tsESLint.configs.strictTypeChecked[2]?.rules,
 				...tsESLint.configs.stylisticTypeChecked[2]?.rules,
 
-				// Overrides
-				'no-shadow': 0, // TODO Replace with @typescript-eslint/no-shadow (breaking change)
+				// Additions
+				'no-shadow': 0,
+				'@typescript-eslint/no-shadow': 'error',
+				'@typescript-eslint/prefer-enum-initializers': 'error',
 			},
 		},
 	];

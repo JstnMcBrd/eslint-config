@@ -8,6 +8,8 @@ export function javascript(): Linter.FlatConfig[] {
 	return [
 		{
 			files: ['**/*.{m,c,}{js,ts}{x,}'],
+		},
+		{
 			plugins: {
 				'@stylistic': stylistic,
 			},
