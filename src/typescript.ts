@@ -30,8 +30,10 @@ export function typescript(): Linter.FlatConfig[] {
 				...tsESLint.configs.strictTypeChecked[2]?.rules,
 				...tsESLint.configs.stylisticTypeChecked[2]?.rules,
 
-				// Overrides
-				'no-shadow': 0, // TODO Replace with @typescript-eslint/no-shadow (breaking change)
+				// Additions
+				'no-shadow': 0,
+				'@typescript-eslint/no-shadow': 'error',
+				'@typescript-eslint/prefer-enum-initializers': 'error',
 			},
 		},
 	];
