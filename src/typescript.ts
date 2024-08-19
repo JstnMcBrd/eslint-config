@@ -1,21 +1,23 @@
-import tsESLint from 'typescript-eslint';
-import type { ESLint, Linter } from 'eslint';
+import typescriptESLint from 'typescript-eslint';
+import type { Linter } from 'eslint';
+
+/**
+ * // FIXME The types of typescript-eslint are not compatible with @types/eslint.
+ * For now, we must solve this by using "as Linter.FlatConfig" typecasting.
+ * @see https://github.com/typescript-eslint/typescript-eslint/issues/9110
+ */
 
 /** @returns ESLint configuration for TypeScript. */
 export function typescript(): Linter.FlatConfig[] {
 	return [
-		// Make sure to ignore the TypeScript output directory
+		// Ignore the TypeScript output directory
 		{
 			ignores: ['dist'],
 		},
+
+		typescriptESLint.configs.base as Linter.FlatConfig,
 		{
-			plugins: {
-				// https://github.com/typescript-eslint/typescript-eslint/issues/9110
-				'@typescript-eslint': tsESLint.plugin as ESLint.Plugin,
-			},
 			languageOptions: {
-				// https://github.com/typescript-eslint/typescript-eslint/issues/9110
-				parser: tsESLint.parser as Linter.ParserModule,
 				parserOptions: {
 					project: 'tsconfig.eslint.json',
 
@@ -38,13 +40,16 @@ export function typescript(): Linter.FlatConfig[] {
 					// },
 				},
 			},
-			rules: {
-				// Recommended
-				...tsESLint.configs.eslintRecommended.rules,
-				...tsESLint.configs.strictTypeChecked[2]?.rules,
-				...tsESLint.configs.stylisticTypeChecked[2]?.rules,
+		},
 
-				// Additions
+		// Recommended
+		typescriptESLint.configs.eslintRecommended as Linter.FlatConfig,
+		typescriptESLint.configs.strictTypeChecked[2] as Linter.FlatConfig,
+		typescriptESLint.configs.stylisticTypeChecked[2] as Linter.FlatConfig,
+
+		// Additions
+		{
+			rules: {
 				'no-shadow': 0,
 				'@typescript-eslint/no-shadow': 'error',
 				'@typescript-eslint/prefer-enum-initializers': 'error',

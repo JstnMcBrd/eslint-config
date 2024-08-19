@@ -6,31 +6,27 @@ import globals from 'globals';
 /** @returns ESLint configuration for React. */
 export function react(): Linter.FlatConfig[] {
 	return [
-		// Make sure to give browser globals to all other project files, not just JSX files
 		{
 			languageOptions: {
 				globals: globals.browser,
 			},
-		},
-		{
-			plugins: {
-				'react': reactPlugin,
-				'react-hooks': reactHooksPlugin,
-			},
-			languageOptions: {
-				parserOptions: reactPlugin.configs.recommended.parserOptions,
-			},
 			settings: {
 				react: {
-					// TODO warns if not set, but will default to 'detect' in the future
+					// TODO Warns if not set, but will default to 'detect' in the future
 					// https://github.com/jsx-eslint/eslint-plugin-react/issues/3758
 					version: 'detect',
 				},
 			},
+		},
+
+		// Recommended
+		reactPlugin.configs.flat.recommended,
+		reactPlugin.configs.flat['jsx-runtime'],
+		{
+			plugins: {
+				'react-hooks': reactHooksPlugin,
+			},
 			rules: {
-				// Recommended
-				...reactPlugin.configs.recommended.rules,
-				...reactPlugin.configs['jsx-runtime'].rules,
 				...reactHooksPlugin.configs.recommended.rules,
 			},
 		},
