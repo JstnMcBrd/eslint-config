@@ -20,15 +20,8 @@ export function react(): Linter.FlatConfig[] {
 		},
 
 		// Recommended
-		reactPlugin.configs.flat.recommended,
-		reactPlugin.configs.flat['jsx-runtime'],
-		{
-			plugins: {
-				'react-hooks': reactHooksPlugin,
-			},
-			rules: {
-				...reactHooksPlugin.configs.recommended.rules,
-			},
-		},
+		reactPlugin.configs.flat['recommended'] ?? {},
+		reactPlugin.configs.flat['jsx-runtime'] ?? {},
+		reactHooksPlugin.configs['recommended-latest'],
 	];
 }
