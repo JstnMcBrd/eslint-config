@@ -27,7 +27,7 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: npm install
+        run: npm clean-install
 
       # Because of this project's special setup, build must come before lint
       - name: Build
