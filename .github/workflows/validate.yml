@@ -11,7 +11,9 @@ on:
 permissions: {}
 
 jobs:
-  validate:
+  lint:
+    needs: [build] # Build output is required for linting
+  
     runs-on: ubuntu-latest
 
     permissions:
@@ -30,13 +32,39 @@ jobs:
       - name: Install dependencies
         run: npm clean-install
 
-      # Because of this project's special setup, build must come before lint
-      - name: Build
-        run: npm run build
+      - name: Download build output
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
 
       - name: Lint
         run: npm run lint
 
-      # No tests
-      # - name: Test
-      #   run: npm test
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read # Required for actions/checkout
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm clean-install
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload output
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
