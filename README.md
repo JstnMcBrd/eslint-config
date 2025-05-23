@@ -1,6 +1,6 @@
 # @jstnmcbrd/eslint-config
 
-[![Validate](https://img.shields.io/github/actions/workflow/status/JstnMcBrd/eslint-config/validate.yml?logo=github&label=Validate)](https://github.com/JstnMcBrd/eslint-config/actions/workflows/validate.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/JstnMcBrd/eslint-config/ci.yml?logo=github&label=CI)](https://github.com/JstnMcBrd/eslint-config/actions/workflows/ci.yml)
 <br />
 [![NPM Version](https://img.shields.io/npm/v/@jstnmcbrd/eslint-config)](https://www.npmjs.com/package/@jstnmcbrd/eslint-config)
 [![NPM License](https://img.shields.io/npm/l/@jstnmcbrd/eslint-config)](./LICENSE)
