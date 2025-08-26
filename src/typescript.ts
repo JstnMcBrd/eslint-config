@@ -1,12 +1,6 @@
 import typescriptESLint from 'typescript-eslint';
 import type { Linter } from 'eslint';
 
-/**
- * // FIXME The types of typescript-eslint are not compatible with @types/eslint.
- * For now, we must solve this by using "as Linter.FlatConfig" typecasting.
- * @see https://github.com/typescript-eslint/typescript-eslint/issues/9110
- */
-
 /** @returns ESLint configuration for TypeScript. */
 export function typescript(): Linter.FlatConfig[] {
 	return [
@@ -15,7 +9,7 @@ export function typescript(): Linter.FlatConfig[] {
 			ignores: ['dist'],
 		},
 
-		typescriptESLint.configs.base as Linter.FlatConfig,
+		typescriptESLint.configs.base,
 		{
 			languageOptions: {
 				parserOptions: {
@@ -43,9 +37,9 @@ export function typescript(): Linter.FlatConfig[] {
 		},
 
 		// Recommended
-		typescriptESLint.configs.eslintRecommended as Linter.FlatConfig,
-		typescriptESLint.configs.strictTypeChecked[2] as Linter.FlatConfig,
-		typescriptESLint.configs.stylisticTypeChecked[2] as Linter.FlatConfig,
+		typescriptESLint.configs.eslintRecommended,
+		typescriptESLint.configs.strictTypeChecked[2] ?? {},
+		typescriptESLint.configs.stylisticTypeChecked[2] ?? {},
 
 		// Additions
 		{
