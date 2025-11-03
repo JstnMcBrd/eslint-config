@@ -22,7 +22,6 @@ export function javascript(): Linter.FlatConfig[] {
 		// Recommended
 		js.configs.recommended,
 		stylistic.configs.customize({
-			flat: true,
 			indent: 'tab',
 			semi: true,
 		}),

@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Order "react" and "typescript" options alphabetically ([#4](https://github.com/JstnMcBrd/eslint-config/pull/4))
 - **Breaking:** update `typescript-eslint` to v6 to v8 ([#6](https://github.com/JstnMcBrd/eslint-config/pull/6), [#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
 - Update `globals` to v13 to v16 ([#8](https://github.com/JstnMcBrd/eslint-config/pull/8), [#73](https://github.com/JstnMcBrd/eslint-config/pull/73))
-- Update `@stylistic/eslint-plugin` from v1 to v2 ([#9](https://github.com/JstnMcBrd/eslint-config/pull/9))
+- **Breaking:** update `@stylistic/eslint-plugin` from v1 to v5 ([#9](https://github.com/JstnMcBrd/eslint-config/pull/9), [#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
 - Improve wording in README ([#11](https://github.com/JstnMcBrd/eslint-config/pull/11))
 - Exclude `eslint` v9 from supported versions ([#11](https://github.com/JstnMcBrd/eslint-config/pull/11))
 - Use `customize()` method for stylistic rule overrides ([#11](https://github.com/JstnMcBrd/eslint-config/pull/11))
