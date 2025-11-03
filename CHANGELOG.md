@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactor to use flat configs from dependencies ([#19](https://github.com/JstnMcBrd/eslint-config/pull/19), [#79](https://github.com/JstnMcBrd/eslint-config/pull/79))
 - **Breaking:** update `eslint-plugin-react-hooks` from v4 to v7 ([#33](https://github.com/JstnMcBrd/eslint-config/pull/33), [#138](https://github.com/JstnMcBrd/eslint-config/pull/138))
 - **Breaking:** update `@eslint/js` from v8 to v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
+- Use `defineConfig()` wrapper method ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
 
 ### Removed
 

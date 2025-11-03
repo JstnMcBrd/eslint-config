@@ -1,4 +1,5 @@
 import type { Linter } from 'eslint';
+import { defineConfig } from 'eslint/config';
 
 import { javascript } from './javascript.js';
 import { react } from './react.js';
@@ -13,9 +14,9 @@ interface Settings {
 
 /** @returns Customizable ESLint configuration. */
 export default function eslintConfig(settings?: Settings): Linter.Config[] {
-	return [
+	return defineConfig([
 		...javascript(),
 		...(settings?.react ? react() : []),
 		...(settings?.typescript ? typescript() : []),
-	];
+	]);
 }
