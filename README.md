@@ -37,7 +37,7 @@ Add a script in your `package.json` for linting.
 ```json
 {
 	"scripts": {
-		"lint": "eslint ."
+		"lint": "eslint"
 	}
 }
 ```
@@ -76,11 +76,11 @@ export default eslintConfig({ react: true, typescript: true });
 
 ## Design
 
-#### Flat Config
+#### Modern
 
+- Only compatible with ESLint v9
 - Uses the new ESLint [flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new)
 - No support for the legacy config, so consider upgrading!
-- ESLint v9 is not supported [yet](https://github.com/JstnMcBrd/eslint-config/issues/10)
 
 #### ECMAScript
 

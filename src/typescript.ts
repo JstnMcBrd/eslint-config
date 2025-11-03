@@ -2,14 +2,13 @@ import typescriptESLint from 'typescript-eslint';
 import type { Linter } from 'eslint';
 
 /** @returns ESLint configuration for TypeScript. */
-export function typescript(): Linter.FlatConfig[] {
+export function typescript(): Linter.Config[] {
 	return [
 		// Ignore the TypeScript output directory
 		{
 			ignores: ['dist'],
 		},
 
-		typescriptESLint.configs.base,
 		{
 			languageOptions: {
 				parserOptions: {
@@ -37,9 +36,8 @@ export function typescript(): Linter.FlatConfig[] {
 		},
 
 		// Recommended
-		typescriptESLint.configs.eslintRecommended,
-		typescriptESLint.configs.strictTypeChecked[2] ?? {},
-		typescriptESLint.configs.stylisticTypeChecked[2] ?? {},
+		...typescriptESLint.configs.strictTypeChecked,
+		...typescriptESLint.configs.stylisticTypeChecked,
 
 		// Additions
 		{

@@ -4,7 +4,7 @@ import type { Linter } from 'eslint';
 import globals from 'globals';
 
 /** @returns Basic ESLint configuration for JavaScript. */
-export function javascript(): Linter.FlatConfig[] {
+export function javascript(): Linter.Config[] {
 	return [
 		{
 			files: ['**/*.{m,c,}{js,ts}{x,}'],
@@ -22,7 +22,6 @@ export function javascript(): Linter.FlatConfig[] {
 		// Recommended
 		js.configs.recommended,
 		stylistic.configs.customize({
-			flat: true,
 			indent: 'tab',
 			semi: true,
 		}),
