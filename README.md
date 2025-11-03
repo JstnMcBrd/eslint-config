@@ -37,7 +37,7 @@ Add a script in your `package.json` for linting.
 ```json
 {
 	"scripts": {
-		"lint": "eslint ."
+		"lint": "eslint"
 	}
 }
 ```
