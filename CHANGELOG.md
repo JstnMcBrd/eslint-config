@@ -27,14 +27,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactor to use flat configs from dependencies ([#19](https://github.com/JstnMcBrd/eslint-config/pull/19), [#79](https://github.com/JstnMcBrd/eslint-config/pull/79))
 - **Breaking:** update `eslint-plugin-react-hooks` from v4 to v7 ([#33](https://github.com/JstnMcBrd/eslint-config/pull/33), [#138](https://github.com/JstnMcBrd/eslint-config/pull/138))
 - **Breaking:** update `@eslint/js` from v8 to v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
-- Use `defineConfig()` wrapper method ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
-- **Breaking:** update `eslint` peer dependency to v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
+- **Breaking:** upgrade to `eslint` v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
 
 ### Removed
 
 - Remove Node runtime restrictions and just rely on dependencies ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
 - Remove redundant `"main"` and `"types"` fields from `package.json` ([#41](https://github.com/JstnMcBrd/eslint-config/pull/41))
-- Remove typecasts for `typescript-eslint` ([#121](https://github.com/JstnMcBrd/eslint-config/pull/121))
 
 ## [1.0.0] - 2024-02-09
 
