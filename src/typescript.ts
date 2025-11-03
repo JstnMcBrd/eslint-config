@@ -2,7 +2,7 @@ import typescriptESLint from 'typescript-eslint';
 import type { Linter } from 'eslint';
 
 /** @returns ESLint configuration for TypeScript. */
-export function typescript(): Linter.FlatConfig[] {
+export function typescript(): Linter.Config[] {
 	return [
 		// Ignore the TypeScript output directory
 		{

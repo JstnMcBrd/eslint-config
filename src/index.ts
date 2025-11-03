@@ -12,7 +12,7 @@ interface Settings {
 }
 
 /** @returns Customizable ESLint configuration. */
-export default function eslintConfig(settings?: Settings): Linter.FlatConfig[] {
+export default function eslintConfig(settings?: Settings): Linter.Config[] {
 	return [
 		...javascript(),
 		...(settings?.react ? react() : []),

@@ -4,7 +4,7 @@ import type { Linter } from 'eslint';
 import globals from 'globals';
 
 /** @returns ESLint configuration for React. */
-export function react(): Linter.FlatConfig[] {
+export function react(): Linter.Config[] {
 	return [
 		{
 			languageOptions: {
