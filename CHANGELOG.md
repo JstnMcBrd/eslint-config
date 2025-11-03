@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking:** update `eslint-plugin-react-hooks` from v4 to v7 ([#33](https://github.com/JstnMcBrd/eslint-config/pull/33), [#138](https://github.com/JstnMcBrd/eslint-config/pull/138))
 - **Breaking:** update `@eslint/js` from v8 to v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
 - **Breaking:** upgrade to `eslint` v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
+- **Breaking:** enable `eslint-plugin-react-hooks` compiler rules ([#145](https://github.com/JstnMcBrd/eslint-config/pull/145))
 
 ### Removed
 

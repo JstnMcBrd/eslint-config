@@ -22,6 +22,6 @@ export function react(): Linter.Config[] {
 		// Recommended
 		reactPlugin.configs.flat['recommended'] ?? {},
 		reactPlugin.configs.flat['jsx-runtime'] ?? {},
-		reactHooksPlugin.configs.flat.recommended,
+		reactHooksPlugin.configs.flat['recommended-latest'],
 	];
 }
