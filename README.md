@@ -111,6 +111,4 @@ When I update a rule in a way that could cause a few harmless lint errors, I wil
 
 ## Keep-a-changelog
 
-This project abides by [keep-a-changelog](https://keepachangelog.com/).
-
-However, instead of a separate CHANGELOG.md file, see the description of [releases on GitHub](https://github.com/JstnMcBrd/eslint-config/releases).
+This project abides by [keep-a-changelog](https://keepachangelog.com/). All relevant changes will be documented in the [CHANGELOG](./CHANGELOG.md).
