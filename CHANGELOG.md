@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking:** update `@eslint/js` from v8 to v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
 - **Breaking:** upgrade to `eslint` v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
 - **Breaking:** enable `eslint-plugin-react-hooks` compiler rules ([#145](https://github.com/JstnMcBrd/eslint-config/pull/145))
+- Use `Config` type instead of `Linter.Config` ([#149](https://github.com/JstnMcBrd/eslint-config/pull/149))
 
 ### Removed
 

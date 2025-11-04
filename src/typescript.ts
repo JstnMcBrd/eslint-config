@@ -1,8 +1,8 @@
+import type { Config } from 'eslint/config';
 import typescriptESLint from 'typescript-eslint';
-import type { Linter } from 'eslint';
 
 /** @returns ESLint configuration for TypeScript. */
-export function typescript(): Linter.Config[] {
+export function typescript(): Config[] {
 	return [
 		// Ignore the TypeScript output directory
 		{

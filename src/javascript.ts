@@ -1,10 +1,10 @@
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import type { Linter } from 'eslint';
+import type { Config } from 'eslint/config';
 import globals from 'globals';
 
 /** @returns Basic ESLint configuration for JavaScript. */
-export function javascript(): Linter.Config[] {
+export function javascript(): Config[] {
 	return [
 		{
 			files: ['**/*.{m,c,}{js,ts}{x,}'],
