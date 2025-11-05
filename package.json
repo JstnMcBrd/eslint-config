@@ -4,8 +4,8 @@
 	"description": "Justin's ESLint configuration",
 	"keywords": [
 		"eslint",
-		"eslintconfig",
-		"eslint-config"
+		"eslint-config",
+		"eslintconfig"
 	],
 	"homepage": "https://github.com/JstnMcBrd/eslint-config",
 	"bugs": "https://github.com/JstnMcBrd/eslint-config/issues",
