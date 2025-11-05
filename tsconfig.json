@@ -1,10 +1,7 @@
 {
-	"include": ["src"],
 	"compilerOptions": {
 		"target": "ESNext",
 		"module": "NodeNext",
-		"outDir": "dist",
-		"declaration": true,
 		"strict": true,
 		"noUncheckedIndexedAccess": true,
 		"exactOptionalPropertyTypes": true,
@@ -14,9 +11,5 @@
 		"noUncheckedSideEffectImports": true,
 		"verbatimModuleSyntax": true,
 		"isolatedModules": true,
-		"isolatedDeclarations": true,
-
-		// For the globals package
-		"resolveJsonModule": true,
 	},
 }

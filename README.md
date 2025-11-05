@@ -62,9 +62,13 @@ import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig({ typescript: true });
 ```
 
-This configuration assumes you have a `typescript-eslint` setup with a `tsconfig.eslint.json` file, as recommended by the [documentation](https://typescript-eslint.io/troubleshooting/typed-linting/monorepos/#one-root-tsconfigjson) (see there for more details).
+This configuration uses the [`projectService`](https://typescript-eslint.io/blog/project-service) feature from `typescript-eslint` for typed linting. Therefore, all linted files must be included in your project's root `tsconfig.json`.
 
-A good example can be found in this repository ([tsconfig.eslint.json](./tsconfig.eslint.json)).
+It is generally good practice to include all JavaScript-related files that need type information in the root `tsconfig.json`, for consistency and improved IDE integration.
+
+If you need to exclude some files from your typescript build (like configs or test files), make a `tsconfig.build.json` file that extends from `tsconfig.json` and only includes files you want to build.
+
+For an example, see this project's [tsconfig.json](./tsconfig.json) and [tsconfig.build.json](./tsconfig.build.json) files.
 
 #### React + TypeScript
 
