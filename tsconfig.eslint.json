@@ -1,9 +1,0 @@
-{
-	"extends": "./tsconfig.json",
-	"include": ["**/*"],
-	"exclude": [],
-	"compilerOptions": {
-		"noEmit": true,
-		"allowJs": true,
-	},
-}
