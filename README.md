@@ -13,7 +13,7 @@
 
 A simple [ESLint](https://eslint.org/) configuration for JavaScript, [TypeScript](https://www.typescriptlang.org/), and [React](https://react.dev/) projects.
 
-Uses [@eslint/js](https://www.npmjs.com/package/@eslint/js), [@stylistic/eslint-plugin](https://www.npmjs.com/package/@stylistic/eslint-plugin), [typescript-eslint](https://www.npmjs.com/package/typescript-eslint), [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react), and [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) configurations.
+Uses [@eslint/js](https://www.npmjs.com/package/@eslint/js), [@stylistic/eslint-plugin](https://www.npmjs.com/package/@stylistic/eslint-plugin), [typescript-eslint](https://www.npmjs.com/package/typescript-eslint), [@eslint-react/eslint-plugin](https://www.npmjs.com/package/@eslint-react/eslint-plugin), and [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) configurations.
 
 Written in TypeScript and transpiles to JavaScript (ESM).
 
