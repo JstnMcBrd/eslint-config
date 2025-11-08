@@ -16,7 +16,7 @@ interface Settings {
 export default function eslintConfig(settings?: Settings): Config[] {
 	return defineConfig([
 		...javascript(),
-		...(settings?.react ? react() : []),
+		...(settings?.react ? react(settings) : []),
 		...(settings?.typescript ? typescript() : []),
 	]);
 }

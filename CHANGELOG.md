@@ -20,7 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking:** update `eslint-plugin-react-hooks` from v4 to v7 ([#33](https://github.com/JstnMcBrd/eslint-config/pull/33), [#138](https://github.com/JstnMcBrd/eslint-config/pull/138))
 - **Breaking:** update `@eslint/js` from v8 to v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
 - **Breaking:** upgrade to `eslint` v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
-- **Breaking:** enable `eslint-plugin-react-hooks` compiler rules ([#145](https://github.com/JstnMcBrd/eslint-config/pull/145))
 - Use `Config` type instead of `Linter.Config` ([#149](https://github.com/JstnMcBrd/eslint-config/pull/149))
 - **Breaking:** use `projectService` for `typescript-eslint` typed linting ([#150](https://github.com/JstnMcBrd/eslint-config/pull/150))
 
@@ -31,11 +30,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking:** add `@typescript-eslint/prefer-enum-initializers` rule ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
 - Add JSDoc to type definitions ([#19](https://github.com/JstnMcBrd/eslint-config/pull/19))
 - Add a `CHANGELOG.md` file ([#142](https://github.com/JstnMcBrd/eslint-config/pull/142))
+- **Breaking:** enable `eslint-plugin-react-hooks` compiler rules ([#145](https://github.com/JstnMcBrd/eslint-config/pull/145))
+- **Breaking:** add `@eslint-react/eslint-plugin` strict config ([#154](https://github.com/JstnMcBrd/eslint-config/pull/154))
 
 ### Removed
 
 - Remove Node runtime restrictions and just rely on dependencies ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
 - Remove redundant `"main"` and `"types"` fields from `package.json` ([#41](https://github.com/JstnMcBrd/eslint-config/pull/41))
+- **Breaking:** remove `eslint-plugin-react` configs ([#154](https://github.com/JstnMcBrd/eslint-config/pull/154))
 
 ## [1.0.0] - 2024-02-09
 
