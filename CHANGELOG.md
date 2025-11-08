@@ -7,14 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-
-- Add badges to README ([#4](https://github.com/JstnMcBrd/eslint-config/pull/4), ([#7](https://github.com/JstnMcBrd/eslint-config/pull/7)))
-- **Breaking:** add `@typescript-eslint/no-shadow` rule ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
-- **Breaking:** add `@typescript-eslint/prefer-enum-initializers` rule ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
-- Add JSDoc to type definitions ([#19](https://github.com/JstnMcBrd/eslint-config/pull/19))
-- Add a `CHANGELOG.md` file ([#142](https://github.com/JstnMcBrd/eslint-config/pull/142))
-
 ### Changed
 
 - Order "react" and "typescript" options alphabetically ([#4](https://github.com/JstnMcBrd/eslint-config/pull/4))
@@ -31,6 +23,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking:** enable `eslint-plugin-react-hooks` compiler rules ([#145](https://github.com/JstnMcBrd/eslint-config/pull/145))
 - Use `Config` type instead of `Linter.Config` ([#149](https://github.com/JstnMcBrd/eslint-config/pull/149))
 - **Breaking:** use `projectService` for `typescript-eslint` typed linting ([#150](https://github.com/JstnMcBrd/eslint-config/pull/150))
+
+### Added
+
+- Add badges to README ([#4](https://github.com/JstnMcBrd/eslint-config/pull/4), ([#7](https://github.com/JstnMcBrd/eslint-config/pull/7)))
+- **Breaking:** add `@typescript-eslint/no-shadow` rule ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
+- **Breaking:** add `@typescript-eslint/prefer-enum-initializers` rule ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
+- Add JSDoc to type definitions ([#19](https://github.com/JstnMcBrd/eslint-config/pull/19))
+- Add a `CHANGELOG.md` file ([#142](https://github.com/JstnMcBrd/eslint-config/pull/142))
 
 ### Removed
 
