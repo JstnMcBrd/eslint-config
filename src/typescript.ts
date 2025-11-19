@@ -1,13 +1,12 @@
 import type { Config } from 'eslint/config';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import typescriptESLint from 'typescript-eslint';
 
 /** @returns ESLint configuration for TypeScript. */
 export function typescript(): Config[] {
-	return [
+	return defineConfig(
 		// Ignore the TypeScript output directory
-		{
-			ignores: ['dist'],
-		},
+		globalIgnores(['dist']),
 
 		// Type information
 		{
@@ -19,8 +18,8 @@ export function typescript(): Config[] {
 		},
 
 		// Recommended
-		...typescriptESLint.configs.strictTypeChecked,
-		...typescriptESLint.configs.stylisticTypeChecked,
+		typescriptESLint.configs.strictTypeChecked,
+		typescriptESLint.configs.stylisticTypeChecked,
 
 		// Additions
 		{
@@ -30,5 +29,5 @@ export function typescript(): Config[] {
 				'@typescript-eslint/prefer-enum-initializers': 'error',
 			},
 		},
-	];
+	);
 }

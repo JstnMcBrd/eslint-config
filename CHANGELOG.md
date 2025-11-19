@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking:** upgrade to `eslint` v9 ([#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
 - Use `Config` type instead of `Linter.Config` ([#149](https://github.com/JstnMcBrd/eslint-config/pull/149))
 - **Breaking:** use `projectService` for `typescript-eslint` typed linting ([#150](https://github.com/JstnMcBrd/eslint-config/pull/150))
+- Use `eslint/config` helper functions ([#157](https://github.com/JstnMcBrd/eslint-config/pull/157))
 
 ### Added
 

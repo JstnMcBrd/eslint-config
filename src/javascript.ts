@@ -1,11 +1,12 @@
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import type { Config } from 'eslint/config';
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 
 /** @returns Basic ESLint configuration for JavaScript. */
 export function javascript(): Config[] {
-	return [
+	return defineConfig(
 		{
 			files: ['**/*.{m,c,}{js,ts}{x,}'],
 		},
@@ -35,5 +36,5 @@ export function javascript(): Config[] {
 				'prefer-const': 'error',
 			},
 		},
-	];
+	);
 }
