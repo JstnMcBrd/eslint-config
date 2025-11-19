@@ -62,7 +62,9 @@ import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig({ typescript: true });
 ```
 
-This configuration uses the [`projectService`](https://typescript-eslint.io/blog/project-service) feature from `typescript-eslint` for typed linting. Therefore, all linted files must be included in your project's root `tsconfig.json`.
+This configuration assumes that your build output directory is `dist` and ignores all files in that directory.
+
+It also uses the [`projectService`](https://typescript-eslint.io/blog/project-service) feature from `typescript-eslint` for typed linting. Therefore, all linted files must be included in your project's root `tsconfig.json`.
 
 It is generally good practice to include all JavaScript-related files that need type information in the root `tsconfig.json`, for consistency and improved IDE integration.
 
