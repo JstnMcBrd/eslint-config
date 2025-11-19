@@ -62,7 +62,9 @@ import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig({ typescript: true });
 ```
 
-This configuration uses the [`projectService`](https://typescript-eslint.io/blog/project-service) feature from `typescript-eslint` for typed linting. Therefore, all linted files must be included in your project's root `tsconfig.json`.
+This configuration assumes that your build output directory is `dist` and ignores all files in that directory.
+
+It also uses the [`projectService`](https://typescript-eslint.io/blog/project-service) feature from `typescript-eslint` for typed linting. Therefore, all linted files must be included in your project's root `tsconfig.json`.
 
 It is generally good practice to include all JavaScript-related files that need type information in the root `tsconfig.json`, for consistency and improved IDE integration.
 
@@ -75,6 +77,37 @@ For an example, see this project's [tsconfig.json](./tsconfig.json) and [tsconfi
 ```js
 import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig({ react: true, typescript: true });
+```
+
+## Extend
+
+If you need to extend the config, you can use the `defineConfig` helper from `eslint`.
+
+For example, you could add NodeJS globals (for a non-TypeScript project).
+
+```js
+import eslintConfig from '@jstnmcbrd/eslint-config';
+import { defineConfig } from 'eslint/config';
+import { nodeBuiltin } from 'globals';
+export default defineConfig(
+	eslintConfig(),
+	{
+		languageOptions: {
+			globals: nodeBuiltin,
+		},
+	},
+);
+```
+
+Or you could ignore a directory.
+
+```js
+import eslintConfig from '@jstnmcbrd/eslint-config';
+import { defineConfig, globalIgnores } from 'eslint/config';
+export default defineConfig(
+	eslintConfig(),
+	globalIgnores(['tmp']),
+);
 ```
 
 ## Design
