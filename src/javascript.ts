@@ -2,7 +2,6 @@ import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import type { Config } from 'eslint/config';
 import { defineConfig } from 'eslint/config';
-import globals from 'globals';
 
 /** @returns Basic ESLint configuration for JavaScript. */
 export function javascript(): Config[] {
@@ -10,17 +9,15 @@ export function javascript(): Config[] {
 		{
 			files: ['**/*.{m,c,}{js,ts}{x,}'],
 		},
+
+		// Report unnecessary eslint-disable comments
 		{
-			languageOptions: {
-				// FIXME What if this is not a node project (like bundling for a browser)?
-				globals: globals.nodeBuiltin,
-			},
 			linterOptions: {
 				reportUnusedDisableDirectives: 'error',
 			},
 		},
 
-		// Recommended
+		// Defaults
 		js.configs.recommended,
 		stylistic.configs.customize({
 			indent: 'tab',

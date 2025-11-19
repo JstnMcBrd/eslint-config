@@ -17,7 +17,7 @@ export function typescript(): Config[] {
 			},
 		},
 
-		// Recommended
+		// Defaults
 		typescriptESLint.configs.strictTypeChecked,
 		typescriptESLint.configs.stylisticTypeChecked,
 
