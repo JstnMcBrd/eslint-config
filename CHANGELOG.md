@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Order "react" and "typescript" options alphabetically ([#4](https://github.com/JstnMcBrd/eslint-config/pull/4))
 - **Breaking:** update `typescript-eslint` to v6 to v8 ([#6](https://github.com/JstnMcBrd/eslint-config/pull/6), [#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
-- Update `globals` to v13 to v16 ([#8](https://github.com/JstnMcBrd/eslint-config/pull/8), [#73](https://github.com/JstnMcBrd/eslint-config/pull/73))
 - **Breaking:** update `@stylistic/eslint-plugin` from v1 to v5 ([#9](https://github.com/JstnMcBrd/eslint-config/pull/9), [#143](https://github.com/JstnMcBrd/eslint-config/pull/143))
 - Improve wording in README ([#11](https://github.com/JstnMcBrd/eslint-config/pull/11))
 - Use `customize()` method for stylistic rule overrides ([#11](https://github.com/JstnMcBrd/eslint-config/pull/11))
@@ -39,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove Node runtime restrictions and just rely on dependencies ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
 - Remove redundant `"main"` and `"types"` fields from `package.json` ([#41](https://github.com/JstnMcBrd/eslint-config/pull/41))
 - **Breaking:** remove `eslint-plugin-react` configs ([#154](https://github.com/JstnMcBrd/eslint-config/pull/154))
+- **Breaking:** remove default globals for NodeJS and browser ([#158](https://github.com/JstnMcBrd/eslint-config/pull/158))
 
 ## [1.0.0] - 2024-02-09
 
