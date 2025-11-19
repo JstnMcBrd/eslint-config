@@ -77,6 +77,37 @@ import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig({ react: true, typescript: true });
 ```
 
+## Extend
+
+If you need to extend the config, you can use the `defineConfig` helper from `eslint`.
+
+For example, you could add NodeJS globals (for a non-TypeScript project).
+
+```js
+import eslintConfig from '@jstnmcbrd/eslint-config';
+import { defineConfig } from 'eslint/config';
+import { nodeBuiltin } from 'globals';
+export default defineConfig(
+	eslintConfig(),
+	{
+		languageOptions: {
+			globals: nodeBuiltin,
+		},
+	},
+);
+```
+
+Or you could ignore a directory.
+
+```js
+import eslintConfig from '@jstnmcbrd/eslint-config';
+import { defineConfig, globalIgnores } from 'eslint/config';
+export default defineConfig(
+	eslintConfig(),
+	globalIgnores(['tmp']),
+);
+```
+
 ## Design
 
 #### Modern

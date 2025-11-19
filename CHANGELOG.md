@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add a `CHANGELOG.md` file ([#142](https://github.com/JstnMcBrd/eslint-config/pull/142))
 - **Breaking:** enable `eslint-plugin-react-hooks` compiler rules ([#145](https://github.com/JstnMcBrd/eslint-config/pull/145))
 - **Breaking:** add `@eslint-react/eslint-plugin` strict config ([#154](https://github.com/JstnMcBrd/eslint-config/pull/154))
+- Add section on extending config to README ([#159](https://github.com/JstnMcBrd/eslint-config/pull/159))
 
 ### Removed
 
