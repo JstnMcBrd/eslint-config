@@ -14,9 +14,9 @@ interface Settings {
 
 /** @returns Customizable ESLint configuration. */
 export default function eslintConfig(settings?: Settings): Config[] {
-	return defineConfig([
-		...javascript(),
-		...(settings?.react ? react(settings) : []),
-		...(settings?.typescript ? typescript() : []),
-	]);
+	return defineConfig(
+		javascript(),
+		(settings?.react ? react(settings) : []),
+		(settings?.typescript ? typescript() : []),
+	);
 }
