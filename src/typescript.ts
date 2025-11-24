@@ -24,9 +24,11 @@ export function typescript(): Config[] {
 		// Additions
 		{
 			rules: {
+				'eqeqeq': 0, // Handled by TypeScript
 				'no-shadow': 0,
 				'@typescript-eslint/no-shadow': 'error',
 				'@typescript-eslint/prefer-enum-initializers': 'error',
+				'@typescript-eslint/switch-exhaustiveness-check': 'error',
 			},
 		},
 	);

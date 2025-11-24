@@ -28,9 +28,12 @@ export function javascript(): Config[] {
 		{
 			rules: {
 				'curly': 'error',
+				'eqeqeq': 'error',
 				'no-shadow': 'error',
 				'no-var': 'error',
 				'prefer-const': 'error',
+
+				'@stylistic/no-confusing-arrow': 'error',
 			},
 		},
 	);
