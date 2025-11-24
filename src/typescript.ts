@@ -2,7 +2,7 @@ import type { Config } from 'eslint/config';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import typescriptESLint from 'typescript-eslint';
 
-/** @returns ESLint configuration for TypeScript. */
+/** @returns ESLint configuration for TypeScript */
 export function typescript(): Config[] {
 	return defineConfig(
 		// Ignore the TypeScript output directory
