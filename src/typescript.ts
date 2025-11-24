@@ -1,6 +1,6 @@
 import type { Config } from 'eslint/config';
 import { defineConfig, globalIgnores } from 'eslint/config';
-import typescriptESLint from 'typescript-eslint';
+import tseslint from 'typescript-eslint';
 
 /** @returns ESLint configuration for TypeScript */
 export function typescript(): Config[] {
@@ -18,8 +18,8 @@ export function typescript(): Config[] {
 		},
 
 		// Defaults
-		typescriptESLint.configs.strictTypeChecked,
-		typescriptESLint.configs.stylisticTypeChecked,
+		tseslint.configs.strictTypeChecked,
+		tseslint.configs.stylisticTypeChecked,
 
 		// Additions
 		{
