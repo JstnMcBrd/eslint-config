@@ -3,7 +3,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import type { Config } from 'eslint/config';
 import { defineConfig } from 'eslint/config';
 
-/** @returns Basic ESLint configuration for JavaScript. */
+/** @returns Base ESLint configuration for JavaScript */
 export function javascript(): Config[] {
 	return defineConfig(
 		{
@@ -28,9 +28,12 @@ export function javascript(): Config[] {
 		{
 			rules: {
 				'curly': 'error',
+				'eqeqeq': 'error',
 				'no-shadow': 'error',
 				'no-var': 'error',
 				'prefer-const': 'error',
+
+				'@stylistic/no-confusing-arrow': 'error',
 			},
 		},
 	);

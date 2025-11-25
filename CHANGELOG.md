@@ -25,8 +25,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Breaking:** add `eqeqeq` rule ([#166](https://github.com/JstnMcBrd/eslint-config/pull/166))
+- **Breaking:** add `@stylistic//no-confusing-arrow` rule ([#166](https://github.com/JstnMcBrd/eslint-config/pull/166))
 - **Breaking:** add `@typescript-eslint/no-shadow` rule ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
 - **Breaking:** add `@typescript-eslint/prefer-enum-initializers` rule ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
+- **Breaking:** add `@typescript-eslint/switch-exhaustiveness-check` rule ([#166](https://github.com/JstnMcBrd/eslint-config/pull/166))
 - **Breaking:** enable `eslint-plugin-react-hooks` compiler rules ([#145](https://github.com/JstnMcBrd/eslint-config/pull/145))
 - **Breaking:** add `@eslint-react/eslint-plugin` strict config ([#154](https://github.com/JstnMcBrd/eslint-config/pull/154))
 - Add badges to README ([#4](https://github.com/JstnMcBrd/eslint-config/pull/4), ([#7](https://github.com/JstnMcBrd/eslint-config/pull/7)))

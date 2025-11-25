@@ -1,8 +1,8 @@
 import type { Config } from 'eslint/config';
 import { defineConfig, globalIgnores } from 'eslint/config';
-import typescriptESLint from 'typescript-eslint';
+import tseslint from 'typescript-eslint';
 
-/** @returns ESLint configuration for TypeScript. */
+/** @returns ESLint configuration for TypeScript */
 export function typescript(): Config[] {
 	return defineConfig(
 		// Ignore the TypeScript output directory
@@ -18,15 +18,17 @@ export function typescript(): Config[] {
 		},
 
 		// Defaults
-		typescriptESLint.configs.strictTypeChecked,
-		typescriptESLint.configs.stylisticTypeChecked,
+		tseslint.configs.strictTypeChecked,
+		tseslint.configs.stylisticTypeChecked,
 
 		// Additions
 		{
 			rules: {
+				'eqeqeq': 0, // Handled by TypeScript
 				'no-shadow': 0,
 				'@typescript-eslint/no-shadow': 'error',
 				'@typescript-eslint/prefer-enum-initializers': 'error',
+				'@typescript-eslint/switch-exhaustiveness-check': 'error',
 			},
 		},
 	);

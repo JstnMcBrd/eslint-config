@@ -12,7 +12,7 @@ interface Settings {
 	typescript?: boolean;
 }
 
-/** @returns Customizable ESLint configuration. */
+/** @returns Customizable ESLint configuration */
 export default function eslintConfig(settings?: Settings): Config[] {
 	return defineConfig(
 		javascript(),
