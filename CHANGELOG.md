@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking:** update `eslint-plugin-react-hooks` from v4 to v7 ([#33](https://github.com/JstnMcBrd/eslint-config/pull/33), [#138](https://github.com/JstnMcBrd/eslint-config/pull/138))
 - **Breaking:** use `projectService` for `typescript-eslint` typed linting ([#150](https://github.com/JstnMcBrd/eslint-config/pull/150))
 - Order "react" and "typescript" options alphabetically ([#4](https://github.com/JstnMcBrd/eslint-config/pull/4))
-- Improve wording in README ([#11](https://github.com/JstnMcBrd/eslint-config/pull/11))
+- Improve wording in README ([#11](https://github.com/JstnMcBrd/eslint-config/pull/11), [#167](https://github.com/JstnMcBrd/eslint-config/pull/167))
 - Use `customize()` method for stylistic rule overrides ([#11](https://github.com/JstnMcBrd/eslint-config/pull/11))
 - Use global `files` glob selector ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
 - Use flat configs from dependencies ([#19](https://github.com/JstnMcBrd/eslint-config/pull/19), [#79](https://github.com/JstnMcBrd/eslint-config/pull/79))

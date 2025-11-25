@@ -87,11 +87,7 @@ import { defineConfig } from 'eslint/config';
 import { nodeBuiltin } from 'globals';
 export default defineConfig(
 	eslintConfig(),
-	{
-		languageOptions: {
-			globals: nodeBuiltin,
-		},
-	},
+	{ languageOptions: { globals: nodeBuiltin } },
 );
 ```
 
@@ -116,9 +112,9 @@ export default defineConfig(
 
 #### ECMAScript
 
-- Transpiled by TypeScript to ECMAScript with ES modules 
+- Transpiled by TypeScript to ESM
 - No support for CommonJS, so consider upgrading!
-- This means you cannot import the package from a node project that is not using `"type":"module"`
+- This means you cannot import the package from a node project that is not using `"type": "module"`
 
 #### Simplicity
 
@@ -131,8 +127,8 @@ export default defineConfig(
 #### No Prettier
 
 - Does not use [Prettier](https://prettier.io/)
-	- It's good to be standardized and opinionated, but I find Prettier to be inflexible to the point of dogmatism. I created this package to enforce my own dogmatic opinions instead.
-	- There's an interesting debate between the purposes of formatters and linters. Strict formatters often erase context encoded in code style, so flexibility can be useful for retaining the intent of the programmer.
+	- It's good to be standardized and opinionated, but I find Prettier to be inflexible and dogmatic. I created this package to enforce my own dogmatic opinions instead.
+	- There's an interesting debate about the purposes of formatters versus linters. Strict formatters often erase context encoded in code style, so flexibility can be useful for retaining the intent of the programmer.
 	- For another perspective, see Anthony Fu's [blog post](https://antfu.me/posts/why-not-prettier) on the subject.
 
 ## Semantic versioning
