@@ -1,13 +1,9 @@
 # @jstnmcbrd/eslint-config
 
-[![CI](https://img.shields.io/github/actions/workflow/status/JstnMcBrd/eslint-config/ci.yml?logo=github&label=CI)](https://github.com/JstnMcBrd/eslint-config/actions/workflows/ci.yml)
-<br />
 [![NPM Version](https://img.shields.io/npm/v/@jstnmcbrd/eslint-config)](https://www.npmjs.com/package/@jstnmcbrd/eslint-config)
-[![NPM License](https://img.shields.io/npm/l/@jstnmcbrd/eslint-config)](./LICENSE)
-![NPM Type Definitions](https://img.shields.io/npm/types/@jstnmcbrd/eslint-config)
-![NPM Downloads](https://img.shields.io/npm/dt/@jstnmcbrd/eslint-config)
-<br />
 [![ESLint version](https://img.shields.io/npm/dependency-version/@jstnmcbrd/eslint-config/peer/eslint)](https://www.npmjs.com/package/eslint)
+[![NPM License](https://img.shields.io/npm/l/@jstnmcbrd/eslint-config)](./LICENSE)
+![NPM Downloads](https://img.shields.io/npm/dt/@jstnmcbrd/eslint-config)
 
 ## About
 
@@ -91,11 +87,7 @@ import { defineConfig } from 'eslint/config';
 import { nodeBuiltin } from 'globals';
 export default defineConfig(
 	eslintConfig(),
-	{
-		languageOptions: {
-			globals: nodeBuiltin,
-		},
-	},
+	{ languageOptions: { globals: nodeBuiltin } },
 );
 ```
 
@@ -120,9 +112,9 @@ export default defineConfig(
 
 #### ECMAScript
 
-- Transpiled by TypeScript to ECMAScript with ES modules 
+- Transpiled by TypeScript to ESM
 - No support for CommonJS, so consider upgrading!
-- This means you cannot import the package from a node project that is not using `"type":"module"`
+- This means you cannot import the package from a node project that is not using `"type": "module"`
 
 #### Simplicity
 
@@ -135,8 +127,8 @@ export default defineConfig(
 #### No Prettier
 
 - Does not use [Prettier](https://prettier.io/)
-	- It's good to be standardized and opinionated, but I find Prettier to be inflexible to the point of dogmatism. I created this package to enforce my own dogmatic opinions instead.
-	- There's an interesting debate between the purposes of formatters and linters. Strict formatters often erase context encoded in code style, so flexibility can be useful for retaining the intent of the programmer.
+	- It's good to be standardized and opinionated, but I find Prettier to be inflexible and dogmatic. I created this package to enforce my own dogmatic opinions instead.
+	- There's an interesting debate about the purposes of formatters versus linters. Strict formatters often erase context encoded in code style, so flexibility can be useful for retaining the intent of the programmer.
 	- For another perspective, see Anthony Fu's [blog post](https://antfu.me/posts/why-not-prettier) on the subject.
 
 ## Semantic versioning
