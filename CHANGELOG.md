@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2025-11-26
+
 ### Changed
 
 - Clarify `eslint` version requirement (`^9.22.0`) ([#173](https://github.com/JstnMcBrd/eslint-config/pull/173))
@@ -61,6 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add README with introduction, usage instructions, design philosophy, etc ([#1](https://github.com/JstnMcBrd/eslint-config/pull/1))
 - Add ISC license ([#1](https://github.com/JstnMcBrd/eslint-config/pull/1))
 
-[Unreleased]: https://github.com/JstnMcBrd/eslint-config/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/JstnMcBrd/eslint-config/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/JstnMcBrd/eslint-config/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/JstnMcBrd/eslint-config/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/JstnMcBrd/eslint-config/releases/tag/v1.0.0
