@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Clarify `eslint` version requirement (`^9.22.0`) ([#173](https://github.com/JstnMcBrd/eslint-config/pull/173))
+- Clarify node engine requirement from dependencies (`^20.19.0 || >=21.1.0`) ([#173](https://github.com/JstnMcBrd/eslint-config/pull/173))
 
 ### Fixed
 

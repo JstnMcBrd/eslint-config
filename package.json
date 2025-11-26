@@ -43,5 +43,8 @@
 	},
 	"peerDependencies": {
 		"eslint": "^9.22.0"
+	},
+	"engines": {
+		"node": "^20.19.0 || >=21.1.0"
 	}
 }
