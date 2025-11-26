@@ -16,6 +16,12 @@
 	"license": "ISC",
 	"author": "Justin McBride",
 	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
 	"files": [
 		"dist"
 	],
