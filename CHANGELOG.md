@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Support `eslint` v10 ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234))
+- **Breaking:** update Node requirement to `^20.19.0 || ^22.13.0 || >=24` ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234))
+
 ## Fixed
 
 - Fix typo in CHANGELOG ([#196](https://github.com/JstnMcBrd/eslint-config/pull/196))
