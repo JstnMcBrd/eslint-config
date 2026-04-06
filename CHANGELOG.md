@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Added
 
 - Explain how to use `eslint.config.ts` in README ([#236](https://github.com/JstnMcBrd/eslint-config/pull/236))
+- Support `typescript` v6 ([#230](https://github.com/JstnMcBrd/eslint-config/pull/230), [#231](https://github.com/JstnMcBrd/eslint-config/pull/231))
 
 ## Fixed
 
