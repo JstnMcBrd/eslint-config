@@ -30,7 +30,7 @@
 		"lint": "eslint --flag unstable_native_nodejs_ts_config"
 	},
 	"dependencies": {
-		"@eslint-react/eslint-plugin": "^2.13.0",
+		"@eslint-react/eslint-plugin": "^4.2.3",
 		"@eslint/js": "^10.0.1",
 		"@stylistic/eslint-plugin": "^5.9.0",
 		"eslint-plugin-react-hooks": "^7.1.0-canary-e8c63626-20260213",
