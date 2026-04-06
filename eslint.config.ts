@@ -1,9 +1,7 @@
-/**
- * TODO Once strip-types is stable in Node.js, remove jiti dependency
- * @see https://eslint.org/docs/latest/use/configure/configuration-files#native-typescript-support
- */
+// FIXME Need the `unstable_native_nodejs_ts_config` flag to use `eslint.config.ts`
+// https://github.com/eslint/eslint/issues/19985
 
-// Requires you to run `npm run build` before linting
+// Must run `npm run build` before linting
 import eslintConfig from './dist/index.js';
 
 export default eslintConfig({ typescript: true });

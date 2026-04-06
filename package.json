@@ -27,7 +27,7 @@
 	],
 	"scripts": {
 		"build": "tsc -p tsconfig.build.json",
-		"lint": "eslint"
+		"lint": "eslint --flag unstable_native_nodejs_ts_config"
 	},
 	"dependencies": {
 		"@eslint-react/eslint-plugin": "^2.13.0",
@@ -38,7 +38,6 @@
 	},
 	"devDependencies": {
 		"eslint": "^10.2.0",
-		"jiti": "^2.6.1",
 		"typescript": "^5.9.3"
 	},
 	"peerDependencies": {
