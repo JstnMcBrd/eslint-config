@@ -44,6 +44,8 @@ import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig();
 ```
 
+Alternatively, you can use a TypeScript config file instead (`eslint.config.ts`). This requires Node `>=22.18.0`, and you must add `--flag unstable_native_nodejs_ts_config` to the `"lint"` script in `package.json`.
+
 #### React
 
 ```js
