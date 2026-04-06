@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Changed
 
-- Support `eslint` v10 ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234))
+- **Breaking:** upgrade to `eslint` v10 ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234), [#235](https://github.com/JstnMcBrd/eslint-config/pull/235))
 - **Breaking:** update Node requirement to `^20.19.0 || ^22.13.0 || >=24` ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234))
 - **Breaking:** update `@eslint/js` from v9 to v10 ([#201](https://github.com/JstnMcBrd/eslint-config/pull/201))
 

@@ -106,7 +106,7 @@ export default defineConfig(
 
 #### Modern
 
-- Only compatible with ESLint v9
+- Only compatible with ESLint v10
 - Uses the new ESLint [flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new)
 - No support for the legacy config, so consider upgrading!
 
@@ -128,7 +128,7 @@ export default defineConfig(
 
 - Does not use [Prettier](https://prettier.io/)
 	- It's good to be standardized and opinionated, but I find Prettier to be inflexible and dogmatic. I created this package to enforce my own dogmatic opinions instead.
-	- There's an interesting debate about the purposes of formatters versus linters. Strict formatters often erase context encoded in code style, so flexibility can be useful for retaining the intent of the programmer.
+	- Strict formatters often erase context encoded in code style, so flexibility can be useful for retaining the intent of the programmer.
 	- For another perspective, see Anthony Fu's [blog post](https://antfu.me/posts/why-not-prettier) on the subject.
 
 ## Semantic versioning
