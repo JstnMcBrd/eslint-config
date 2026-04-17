@@ -1,9 +1,10 @@
 # @jstnmcbrd/eslint-config
 
-[![NPM Version](https://img.shields.io/npm/v/@jstnmcbrd/eslint-config)](https://www.npmjs.com/package/@jstnmcbrd/eslint-config)
-[![ESLint version](https://img.shields.io/npm/dependency-version/@jstnmcbrd/eslint-config/peer/eslint)](https://www.npmjs.com/package/eslint)
-[![NPM License](https://img.shields.io/npm/l/@jstnmcbrd/eslint-config)](./LICENSE)
-![NPM Downloads](https://img.shields.io/npm/dt/@jstnmcbrd/eslint-config)
+[![npm version](https://img.shields.io/npm/v/@jstnmcbrd/eslint-config)](https://www.npmjs.com/package/@jstnmcbrd/eslint-config)
+![node version](https://img.shields.io/node/v/delphi-ai)
+[![eslint version](https://img.shields.io/npm/dependency-version/@jstnmcbrd/eslint-config/peer/eslint)](https://www.npmjs.com/package/eslint)
+[![npm license](https://img.shields.io/npm/l/@jstnmcbrd/eslint-config)](./LICENSE)
+![npm downloads](https://img.shields.io/npm/dt/@jstnmcbrd/eslint-config)
 
 ## About
 
