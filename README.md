@@ -1,9 +1,10 @@
 # @jstnmcbrd/eslint-config
 
-[![NPM Version](https://img.shields.io/npm/v/@jstnmcbrd/eslint-config)](https://www.npmjs.com/package/@jstnmcbrd/eslint-config)
-[![ESLint version](https://img.shields.io/npm/dependency-version/@jstnmcbrd/eslint-config/peer/eslint)](https://www.npmjs.com/package/eslint)
-[![NPM License](https://img.shields.io/npm/l/@jstnmcbrd/eslint-config)](./LICENSE)
-![NPM Downloads](https://img.shields.io/npm/dt/@jstnmcbrd/eslint-config)
+[![npm version](https://img.shields.io/npm/v/@jstnmcbrd/eslint-config)](https://www.npmjs.com/package/@jstnmcbrd/eslint-config)
+![node version](https://img.shields.io/node/v/delphi-ai)
+[![eslint version](https://img.shields.io/npm/dependency-version/@jstnmcbrd/eslint-config/peer/eslint)](https://www.npmjs.com/package/eslint)
+[![npm license](https://img.shields.io/npm/l/@jstnmcbrd/eslint-config)](./LICENSE)
+![npm downloads](https://img.shields.io/npm/dt/@jstnmcbrd/eslint-config)
 
 ## About
 
@@ -81,7 +82,7 @@ export default eslintConfig({ react: true, typescript: true });
 
 If you need to extend the config, you can use the `defineConfig` helper from `eslint`.
 
-For example, you could add NodeJS globals (for a non-TypeScript project).
+For example, you could add Node.js globals (for a non-TypeScript project).
 
 ```js
 import eslintConfig from '@jstnmcbrd/eslint-config';
@@ -116,7 +117,7 @@ export default defineConfig(
 
 - Transpiled by TypeScript to ESM
 - No support for CommonJS, so consider upgrading!
-- This means you cannot import the package from a node project that is not using `"type": "module"`
+- This means you cannot import the package from a Node.js project that is not using `"type": "module"`
 
 #### Simplicity
 

@@ -10,9 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Changed
 
 - **Breaking:** upgrade to `eslint` v10 ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234), [#235](https://github.com/JstnMcBrd/eslint-config/pull/235))
-- **Breaking:** update Node requirement to `^22.13.0 || >=24` ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234), [#230](https://github.com/JstnMcBrd/eslint-config/pull/230))
+- **Breaking:** update Node.js requirement to `^22.13.0 || >=24` ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234), [#230](https://github.com/JstnMcBrd/eslint-config/pull/230))
 - **Breaking:** update `@eslint/js` from v9 to v10 ([#201](https://github.com/JstnMcBrd/eslint-config/pull/201))
 - **Breaking:** update `@eslint-react/eslint-plugin` from v2 to v4 ([#230](https://github.com/JstnMcBrd/eslint-config/pull/230))
+- Clean up README ([#241](https://github.com/JstnMcBrd/eslint-config/pull/241))
 
 ## Added
 
@@ -69,8 +70,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - **Breaking:** remove `eslint-plugin-react` configs ([#154](https://github.com/JstnMcBrd/eslint-config/pull/154))
-- **Breaking:** remove default globals for NodeJS and browser ([#158](https://github.com/JstnMcBrd/eslint-config/pull/158))
-- Remove Node runtime restrictions and just rely on dependencies ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
+- **Breaking:** remove default globals for Node.js and browser ([#158](https://github.com/JstnMcBrd/eslint-config/pull/158))
+- Remove Node.js runtime restrictions and just rely on dependencies ([#18](https://github.com/JstnMcBrd/eslint-config/pull/18))
 - Remove redundant `"main"` and `"types"` fields from `package.json` ([#41](https://github.com/JstnMcBrd/eslint-config/pull/41))
 
 ## [1.0.0] - 2024-02-09
