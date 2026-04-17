@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking:** update Node.js requirement to `^22.13.0 || >=24` ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234), [#230](https://github.com/JstnMcBrd/eslint-config/pull/230))
 - **Breaking:** update `@eslint/js` from v9 to v10 ([#201](https://github.com/JstnMcBrd/eslint-config/pull/201))
 - **Breaking:** update `@eslint-react/eslint-plugin` from v2 to v4 ([#230](https://github.com/JstnMcBrd/eslint-config/pull/230))
+- Clean up README ([#241](https://github.com/JstnMcBrd/eslint-config/pull/241))
 
 ## Added
 
