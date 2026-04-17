@@ -82,7 +82,7 @@ export default eslintConfig({ react: true, typescript: true });
 
 If you need to extend the config, you can use the `defineConfig` helper from `eslint`.
 
-For example, you could add NodeJS globals (for a non-TypeScript project).
+For example, you could add Node.js globals (for a non-TypeScript project).
 
 ```js
 import eslintConfig from '@jstnmcbrd/eslint-config';
@@ -117,7 +117,7 @@ export default defineConfig(
 
 - Transpiled by TypeScript to ESM
 - No support for CommonJS, so consider upgrading!
-- This means you cannot import the package from a node project that is not using `"type": "module"`
+- This means you cannot import the package from a Node.js project that is not using `"type": "module"`
 
 #### Simplicity
 
