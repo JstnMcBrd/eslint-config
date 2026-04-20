@@ -3,8 +3,12 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
 /** @returns ESLint configuration for TypeScript */
-export function typescript(): Config[] {
+export function typescript(settings: { react?: boolean }): Config[] {
 	return defineConfig(
+		{
+			files: [`**/*.{m,c,}{js,ts}${settings.react ? '{x,}' : ''}`],
+		},
+
 		// Ignore the TypeScript output directory
 		globalIgnores(['dist']),
 
@@ -24,9 +28,12 @@ export function typescript(): Config[] {
 		// Additions
 		{
 			rules: {
-				'eqeqeq': 0, // Handled by TypeScript
-				'no-shadow': 0,
+				'eqeqeq': 'off', // Handled by TypeScript
+
+				// https://github.com/eslint/eslint/issues/20776
+				'no-shadow': 'off',
 				'@typescript-eslint/no-shadow': 'error',
+
 				'@typescript-eslint/prefer-enum-initializers': 'error',
 				'@typescript-eslint/switch-exhaustiveness-check': 'error',
 			},

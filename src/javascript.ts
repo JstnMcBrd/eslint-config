@@ -7,7 +7,7 @@ import { defineConfig } from 'eslint/config';
 export function javascript(): Config[] {
 	return defineConfig(
 		{
-			files: ['**/*.{m,c,}{js,ts}{x,}'],
+			files: ['**/*.{m,c,}js'],
 		},
 
 		// Report unnecessary eslint-disable comments
