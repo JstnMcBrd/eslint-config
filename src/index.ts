@@ -1,4 +1,4 @@
-import type { Config } from 'eslint/config';
+import type { ConfigObject } from 'eslint/config';
 import { defineConfig } from 'eslint/config';
 
 import { javascript } from './javascript.js';
@@ -13,7 +13,7 @@ interface Settings {
 }
 
 /** @returns Customizable ESLint configuration */
-export default function eslintConfig(settings?: Settings): Config[] {
+export default function eslintConfig(settings?: Settings): ConfigObject[] {
 	return defineConfig(
 		javascript(),
 		(settings?.react ? react(settings) : []),
