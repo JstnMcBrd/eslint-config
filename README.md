@@ -10,25 +10,28 @@
 
 A simple [ESLint](https://eslint.org/) configuration for JavaScript, [TypeScript](https://www.typescriptlang.org/), and [React](https://react.dev/) projects.
 
-Uses [@eslint/js](https://www.npmjs.com/package/@eslint/js), [@stylistic/eslint-plugin](https://www.npmjs.com/package/@stylistic/eslint-plugin), [typescript-eslint](https://www.npmjs.com/package/typescript-eslint), [@eslint-react/eslint-plugin](https://www.npmjs.com/package/@eslint-react/eslint-plugin), and [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) configurations.
-
-Written in TypeScript and transpiles to JavaScript (ESM).
+Included:
+* [@eslint/js](https://github.com/eslint/eslint/tree/main/packages/js),
+* [@stylistic/eslint-plugin](https://github.com/eslint-stylistic/eslint-stylistic),
+* [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint),
+* [@eslint-react/eslint-plugin](https://github.com/Rel1cx/eslint-react),
+* [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks).
 
 ## Introduction
 
-I noticed I was duplicating much of the ESLint configuration between my projects, and synchronizing changes was annoying. So I have extracted the configuration into a new package to use anywhere.
+I noticed I was duplicating most of the ESLint configuration between my projects, and synchronizing changes was annoying. So I have extracted the configuration into a new package to use anywhere.
 
-You are welcome to use this configuration, but it is primarily designed for my personal use. I cannot promise to support your use case. However, I do plan to follow semantic versioning for handling breaking changes.
+You are welcome to use this configuration, but it is primarily designed for me. I cannot promise to support your use case. However, I will follow semantic versioning to handle breaking changes.
 
 ## Usage
 
-You must also install `eslint` to use this package.
+Install the packages.
 
 ```sh
 npm install --save-dev eslint @jstnmcbrd/eslint-config
 ```
 
-Add a script in your `package.json` for linting.
+Add a lint script in your `package.json`.
 
 ```json
 {
@@ -38,23 +41,23 @@ Add a script in your `package.json` for linting.
 }
 ```
 
-Add a `eslint.config.js` file and import the configuration as follows.
+Add a `eslint.config.js` file and import the configuration.
 
 ```js
 import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig();
 ```
 
-Alternatively, you can use a TypeScript config file instead (`eslint.config.ts`). This requires Node.js `^22.18.0 || >=24`, and you must add `--flag unstable_native_nodejs_ts_config` to the `"lint"` script in `package.json`.
+If you want to use [`eslint.config.ts`]((https://eslint.org/docs/latest/use/configure/configuration-files#native-typescript-support)) instead, you must have Node.js `^22.18.0 || >=24.0.0` and add `--flag unstable_native_nodejs_ts_config` to the `"lint"` script in `package.json`.
 
-#### React
+### React
 
 ```js
 import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig({ react: true });
 ```
 
-#### TypeScript
+### TypeScript
 
 ```js
 import eslintConfig from '@jstnmcbrd/eslint-config';
@@ -69,9 +72,9 @@ It is generally good practice to include all JavaScript-related files that need 
 
 If you need to exclude some files from your typescript build (like configs or test files), make a `tsconfig.build.json` file that extends from `tsconfig.json` and only includes files you want to build.
 
-For an example, see this project's [tsconfig.json](./tsconfig.json) and [tsconfig.build.json](./tsconfig.build.json) files.
+For example, see this project's [tsconfig.json](./tsconfig.json) and [tsconfig.build.json](./tsconfig.build.json) files.
 
-#### React + TypeScript
+### React + TypeScript
 
 ```js
 import eslintConfig from '@jstnmcbrd/eslint-config';
@@ -110,35 +113,29 @@ export default defineConfig(
 #### Modern
 
 - Only compatible with ESLint v10
-- Uses the new ESLint [flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new)
-- No support for the legacy config, so consider upgrading!
+- Uses the new [flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), no support for legacy config
+- Transpiles to ESM, no support for CommonJS
 
-#### ECMAScript
-
-- Transpiled by TypeScript to ESM
-- No support for CommonJS, so consider upgrading!
-- This means you cannot import the package from a Node.js project that is not using `"type": "module"`
-
-#### Simplicity
+#### Simple
 
 - Uses as few plugins as possible
-- Uses plugins that are as official as possible, and avoids more esoteric/niche plugins
-- Stays as close to recommended defaults as possible, with a few noteable exceptions
+- Uses plugins that are as official as possible, avoids more esoteric/niche plugins
+- Stays as close to recommended defaults as possible, with a few notable exceptions
 	- [Tabs instead of spaces](https://x.com/JstnMcBrd/status/1616269720260575232)
 	- Semicolons
 
 #### No Prettier
 
 - Does not use [Prettier](https://prettier.io/)
-	- It's good to be standardized and opinionated, but I find Prettier to be inflexible and dogmatic. I created this package to enforce my own dogmatic opinions instead.
+	- It's good to be standardized, but I find Prettier to be inflexible and dogmatic. I created this package to enforce my own dogmatic opinions instead.
 	- Strict formatters often erase context encoded in code style, so flexibility can be useful for retaining the intent of the programmer.
-	- For another perspective, see Anthony Fu's [blog post](https://antfu.me/posts/why-not-prettier) on the subject.
+	- For another perspective, see the blog post ["Why I don't use Prettier"](https://antfu.me/posts/why-not-prettier) from Anthony Fu.
 
 ## Semantic versioning
 
-This project aspires to abide by [semantic versioning](https://semver.org/). However, given the interesting nature of updating code quality rules, it is not always clear what constitutes a "breaking" change. ESLint has a section on the subject in their [README](https://github.com/eslint/eslint#semantic-versioning-policy).
+This project adheres to [semantic versioning](https://semver.org/). However, given the nature of updating code quality rules, it is not always clear what constitutes a "breaking" change. ESLint has a section on the subject in their [README](https://github.com/eslint/eslint#semantic-versioning-policy).
 
-When I update a rule in a way that could cause a few harmless lint errors, I will try to always bump a minor version. If I update many rules, fundamentally change a rule, or change the configuration API, I will bump a major version.
+When I update a rule in a way that could cause a few harmless lint errors, I will bump a minor version. If I update many rules, fundamentally change a rule, or change the configuration API, I will bump a major version.
 
 ## Keep-a-changelog
 
