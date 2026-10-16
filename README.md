@@ -1,7 +1,7 @@
 # @jstnmcbrd/eslint-config
 
 [![npm version](https://img.shields.io/npm/v/@jstnmcbrd/eslint-config)](https://www.npmjs.com/package/@jstnmcbrd/eslint-config)
-![node version](https://img.shields.io/node/v/delphi-ai)
+![node version](https://img.shields.io/node/v/@jstnmcbrd/eslint-config)
 [![eslint version](https://img.shields.io/npm/dependency-version/@jstnmcbrd/eslint-config/peer/eslint)](https://www.npmjs.com/package/eslint)
 [![npm license](https://img.shields.io/npm/l/@jstnmcbrd/eslint-config)](./LICENSE)
 ![npm downloads](https://img.shields.io/npm/dt/@jstnmcbrd/eslint-config)
