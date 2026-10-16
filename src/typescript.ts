@@ -1,9 +1,9 @@
-import type { Config } from 'eslint/config';
+import type { ConfigObject } from 'eslint/config';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
 /** @returns ESLint configuration for TypeScript */
-export function typescript(settings: { react?: boolean }): Config[] {
+export function typescript(settings: { react?: boolean }): ConfigObject[] {
 	return defineConfig(
 		{
 			files: [`**/*.{m,c,}{js,ts}${settings.react ? '{x,}' : ''}`],
