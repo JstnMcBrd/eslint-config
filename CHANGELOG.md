@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking:** update Node.js requirement to `^22.13.0 || >=24.0.0` ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234), [#230](https://github.com/JstnMcBrd/eslint-config/pull/230))
 - **Breaking:** update `@eslint/js` from v9 to v10 ([#201](https://github.com/JstnMcBrd/eslint-config/pull/201))
 - **Breaking:** update `@eslint-react/eslint-plugin` from v2 to v5 ([#230](https://github.com/JstnMcBrd/eslint-config/pull/230), [#251](https://github.com/JstnMcBrd/eslint-config/pull/251))
-- Clean up README ([#241](https://github.com/JstnMcBrd/eslint-config/pull/241))
+- Improve README ([#241](https://github.com/JstnMcBrd/eslint-config/pull/241), [#317](https://github.com/JstnMcBrd/eslint-config/pull/317))
 - Divide global include globs by config type ([#246](https://github.com/JstnMcBrd/eslint-config/pull/246))
 
 ## Added
