@@ -1,6 +1,6 @@
 {
 	"name": "@jstnmcbrd/eslint-config",
-	"version": "3.0.0-alpha",
+	"version": "3.0.0",
 	"description": "Justin's ESLint configuration",
 	"keywords": [
 		"eslint",
