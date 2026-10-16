@@ -1,10 +1,10 @@
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import type { Config } from 'eslint/config';
+import type { ConfigObject } from 'eslint/config';
 import { defineConfig } from 'eslint/config';
 
 /** @returns Base ESLint configuration for JavaScript */
-export function javascript(): Config[] {
+export function javascript(): ConfigObject[] {
 	return defineConfig(
 		{
 			files: ['**/*.{m,c,}js'],
