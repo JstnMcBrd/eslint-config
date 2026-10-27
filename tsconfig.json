@@ -10,6 +10,7 @@
 		"noUnusedParameters": true,
 
 		"module": "nodenext",
+		"rewriteRelativeImportExtensions": true,
 
 		"verbatimModuleSyntax": true,
 	},
