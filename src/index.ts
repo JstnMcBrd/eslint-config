@@ -1,8 +1,8 @@
 import type { ConfigObject } from 'eslint/config';
 import { defineConfig } from 'eslint/config';
 
-import { javascript } from './javascript.js';
-import { typescript } from './typescript.js';
+import { javascript } from './javascript.ts';
+import { typescript } from './typescript.ts';
 
 interface Settings {
 	/** Whether to include lint rules for TypeScript projects */
