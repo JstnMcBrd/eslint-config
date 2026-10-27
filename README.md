@@ -8,14 +8,12 @@
 
 ## About
 
-A simple [ESLint](https://eslint.org/) configuration for JavaScript, [TypeScript](https://www.typescriptlang.org/), and [React](https://react.dev/) projects.
+A simple [ESLint](https://eslint.org/) configuration for JavaScript and [TypeScript](https://www.typescriptlang.org/) projects.
 
 Included:
 * [@eslint/js](https://github.com/eslint/eslint/tree/main/packages/js),
 * [@stylistic/eslint-plugin](https://github.com/eslint-stylistic/eslint-stylistic),
-* [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint),
-* [@eslint-react/eslint-plugin](https://github.com/Rel1cx/eslint-react),
-* [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks).
+* [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint).
 
 ## Introduction
 
@@ -50,13 +48,6 @@ export default eslintConfig();
 
 If you want to use [`eslint.config.ts`]((https://eslint.org/docs/latest/use/configure/configuration-files#native-typescript-support)) instead, you must have Node.js `^22.18.0 || >=24.0.0` and add `--flag unstable_native_nodejs_ts_config` to the `"lint"` script in `package.json`.
 
-### React
-
-```js
-import eslintConfig from '@jstnmcbrd/eslint-config';
-export default eslintConfig({ react: true });
-```
-
 ### TypeScript
 
 ```js
@@ -73,13 +64,6 @@ It is generally good practice to include all JavaScript-related files that need 
 If you need to exclude some files from your typescript build (like configs or test files), make a `tsconfig.build.json` file that extends from `tsconfig.json` and only includes files you want to build.
 
 For example, see this project's [tsconfig.json](./tsconfig.json) and [tsconfig.build.json](./tsconfig.build.json) files.
-
-### React + TypeScript
-
-```js
-import eslintConfig from '@jstnmcbrd/eslint-config';
-export default eslintConfig({ react: true, typescript: true });
-```
 
 ## Extend
 

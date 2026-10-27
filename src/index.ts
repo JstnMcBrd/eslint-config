@@ -2,12 +2,9 @@ import type { ConfigObject } from 'eslint/config';
 import { defineConfig } from 'eslint/config';
 
 import { javascript } from './javascript.js';
-import { react } from './react.js';
 import { typescript } from './typescript.js';
 
 interface Settings {
-	/** Whether to include lint rules for React projects */
-	react?: boolean;
 	/** Whether to include lint rules for TypeScript projects */
 	typescript?: boolean;
 }
@@ -16,7 +13,6 @@ interface Settings {
 export default function eslintConfig(settings?: Settings): ConfigObject[] {
 	return defineConfig(
 		javascript(),
-		(settings?.react ? react(settings) : []),
-		(settings?.typescript ? typescript(settings) : []),
+		(settings?.typescript ? typescript() : []),
 	);
 }
