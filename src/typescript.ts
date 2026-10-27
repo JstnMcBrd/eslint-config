@@ -3,10 +3,10 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
 /** @returns ESLint configuration for TypeScript */
-export function typescript(settings: { react?: boolean }): ConfigObject[] {
+export function typescript(): ConfigObject[] {
 	return defineConfig(
 		{
-			files: [`**/*.{m,c,}{js,ts}${settings.react ? '{x,}' : ''}`],
+			files: ['**/*.{m,c,}{js,ts}'],
 		},
 
 		// Ignore the TypeScript output directory
