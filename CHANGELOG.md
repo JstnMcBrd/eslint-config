@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **Breaking:** enable TypeScript lint rules by default ([#328](https://github.com/JstnMcBrd/eslint-config/pull/328))
+
 ### Removed
 
 - **Breaking:** remove `react` option and configurations ([#326](https://github.com/JstnMcBrd/eslint-config/pull/326))

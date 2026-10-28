@@ -13,6 +13,6 @@ interface Settings {
 export default function eslintConfig(settings?: Settings): ConfigObject[] {
 	return defineConfig(
 		javascript(),
-		(settings?.typescript ? typescript() : []),
+		typescript(),
 	);
 }
