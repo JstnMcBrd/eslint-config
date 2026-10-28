@@ -3,4 +3,4 @@
 
 import eslintConfig from './src/index.ts';
 
-export default eslintConfig({ typescript: true });
+export default eslintConfig();
