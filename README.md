@@ -34,19 +34,19 @@ Add a lint script in your `package.json`.
 ```json
 {
 	"scripts": {
-		"lint": "eslint"
+		"lint": "eslint --flag unstable_native_nodejs_ts_config"
 	}
 }
 ```
 
-Add a `eslint.config.js` file and import the configuration.
+Add a `eslint.config.ts` file and import the configuration.
 
-```js
+```ts
 import eslintConfig from '@jstnmcbrd/eslint-config';
 export default eslintConfig();
 ```
 
-If you want to use [`eslint.config.ts`]((https://eslint.org/docs/latest/use/configure/configuration-files#native-typescript-support)) instead, you must have Node.js `^22.18.0 || >=24.0.0` and add `--flag unstable_native_nodejs_ts_config` to the `"lint"` script in `package.json`.
+Support for [`eslint.config.ts`](https://eslint.org/docs/latest/use/configure/configuration-files#native-typescript-support) is experimental and requires Node.js `^22.18.0 || >=24.0.0`.
 
 ### TypeScript
 
