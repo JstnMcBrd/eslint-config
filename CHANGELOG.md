@@ -7,13 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## Removed
+### Removed
 
-- **Breaking:** remove `react` option and configurations
+- **Breaking:** remove `react` option and configurations ([#326](https://github.com/JstnMcBrd/eslint-config/pull/326))
 
 ## [3.0.0] - 2026-10-16
 
-## Changed
+### Changed
 
 - **Breaking:** upgrade to `eslint` v10 ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234), [#235](https://github.com/JstnMcBrd/eslint-config/pull/235))
 - **Breaking:** update Node.js requirement to `^20.19.0 || ^22.13.0 || >=24.0.0` ([#234](https://github.com/JstnMcBrd/eslint-config/pull/234))
@@ -22,12 +22,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improve README ([#241](https://github.com/JstnMcBrd/eslint-config/pull/241), [#317](https://github.com/JstnMcBrd/eslint-config/pull/317))
 - Divide global include globs by config type ([#246](https://github.com/JstnMcBrd/eslint-config/pull/246))
 
-## Added
+### Added
 
 - Explain how to use `eslint.config.ts` in README ([#236](https://github.com/JstnMcBrd/eslint-config/pull/236))
 - Support `typescript` v6 ([#230](https://github.com/JstnMcBrd/eslint-config/pull/230), [#231](https://github.com/JstnMcBrd/eslint-config/pull/231))
 
-## Fixed
+### Fixed
 
 - Fix typo in CHANGELOG ([#196](https://github.com/JstnMcBrd/eslint-config/pull/196))
 - Fix parsing errors from TypeScript files when `typescript: false` ([#246](https://github.com/JstnMcBrd/eslint-config/pull/246))
