@@ -8,12 +8,12 @@
 
 ## About
 
-A simple [ESLint](https://eslint.org/) configuration for JavaScript and [TypeScript](https://www.typescriptlang.org/) projects.
+A simple [ESLint](https://eslint.org/) configuration for [TypeScript](https://www.typescriptlang.org/) projects.
 
 Included:
-* [@eslint/js](https://github.com/eslint/eslint/tree/main/packages/js),
-* [@stylistic/eslint-plugin](https://github.com/eslint-stylistic/eslint-stylistic),
-* [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint).
+* [@eslint/js](https://github.com/eslint/eslint/tree/main/packages/js)
+* [@stylistic/eslint-plugin](https://github.com/eslint-stylistic/eslint-stylistic)
+* [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
 
 ## Introduction
 
@@ -47,41 +47,41 @@ export default eslintConfig();
 ```
 
 Support for [`eslint.config.ts`](https://eslint.org/docs/latest/use/configure/configuration-files#native-typescript-support) is experimental and requires Node.js `^22.18.0 || >=24.0.0`.
+If you want to use `eslint.config.js` instead, you must enable `allowJs: true` in `tsconfig.json` (see below).
 
-### TypeScript
+You will also need a `tsconfig.json`. **It must include all linted files.** This is required by the [`projectService`](https://typescript-eslint.io/blog/project-service) feature from `typescript-eslint`.
 
-```js
-import eslintConfig from '@jstnmcbrd/eslint-config';
-export default eslintConfig({ typescript: true });
+```jsonc
+{
+	"compilerOptions": {
+		"outDir": "dist", // The config excludes `dist` from lint
+		"allowJs": true   // Required if there are any JavaScript files
+	}
+}
 ```
 
-This configuration assumes that your build output directory is `dist` and ignores all files in that directory.
-
-It also uses the [`projectService`](https://typescript-eslint.io/blog/project-service) feature from `typescript-eslint` for typed linting. Therefore, all linted files must be included in your project's root `tsconfig.json`.
-
-It is generally good practice to include all JavaScript-related files that need type information in the root `tsconfig.json`, for consistency and improved IDE integration.
-
-If you need to exclude some files from your typescript build (like configs or test files), make a `tsconfig.build.json` file that extends from `tsconfig.json` and only includes files you want to build.
+If you need to exclude some files from your TypeScript build (like configs or test files), make a `tsconfig.build.json` file that extends from `tsconfig.json` and only includes files you want to build.
 
 For example, see this project's [tsconfig.json](./tsconfig.json) and [tsconfig.build.json](./tsconfig.build.json) files.
+
+### JavaScript projects
+
+Even if your project has no TypeScript, you will still need a `tsconfig.json` that includes all linted files. You can use this minimal config.
+
+```json
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"noEmit": true
+	}
+}
+```
 
 ## Extend
 
 If you need to extend the config, you can use the `defineConfig` helper from `eslint`.
 
-For example, you could add Node.js globals (for a non-TypeScript project).
-
-```js
-import eslintConfig from '@jstnmcbrd/eslint-config';
-import { defineConfig } from 'eslint/config';
-import { nodeBuiltin } from 'globals';
-export default defineConfig(
-	eslintConfig(),
-	{ languageOptions: { globals: nodeBuiltin } },
-);
-```
-
-Or you could ignore a directory.
+For example, you could ignore a directory.
 
 ```js
 import eslintConfig from '@jstnmcbrd/eslint-config';
@@ -96,6 +96,7 @@ export default defineConfig(
 
 #### Modern
 
+- TypeScript-first
 - Only compatible with ESLint v10
 - Uses the new [flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), no support for legacy config
 - Transpiles to ESM, no support for CommonJS
