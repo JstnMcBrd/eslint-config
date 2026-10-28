@@ -64,6 +64,26 @@ If you need to exclude some files from your TypeScript build (like configs or te
 
 For example, see this project's [tsconfig.json](./tsconfig.json) and [tsconfig.build.json](./tsconfig.build.json) files.
 
+### VSCode
+
+Add the ESLint extension to `.vscode/extensions.json`.
+
+```json
+{
+	"recommendations": ["dbaeumer.vscode-eslint"]
+}
+```
+
+If you are using `eslint.config.ts`, you need to add a flag to `.vscode/settings.json`.
+
+```json
+{
+    "eslint.options": {
+		"flags": ["unstable_native_nodejs_ts_config"]
+	}
+}
+```
+
 ### JavaScript projects
 
 Even if your project has no TypeScript, you will still need a `tsconfig.json` that includes all linted files. You can use this minimal config.

@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Breaking:** enable TypeScript lint rules by default ([#328](https://github.com/JstnMcBrd/eslint-config/pull/328))
 - **Breaking:** add `typescript` as a required peer dependency ([#328](https://github.com/JstnMcBrd/eslint-config/pull/328))
 - Update documentation to be TypeScript-first with JavaScript workarounds ([#328](https://github.com/JstnMcBrd/eslint-config/pull/328))
+- Explain how to use `eslint.config.ts` with VSCode ESLint extension ([#330](https://github.com/JstnMcBrd/eslint-config/pull/330))
 
 ### Removed
 
