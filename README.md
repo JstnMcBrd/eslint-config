@@ -26,7 +26,7 @@ You are welcome to use this configuration, but it is primarily designed for me. 
 Install the packages.
 
 ```sh
-npm install --save-dev eslint @jstnmcbrd/eslint-config
+npm install --save-dev @jstnmcbrd/eslint-config eslint typescript
 ```
 
 Add a lint script in your `package.json`.
