@@ -4,13 +4,8 @@ import { defineConfig } from 'eslint/config';
 import { javascript } from './javascript.ts';
 import { typescript } from './typescript.ts';
 
-interface Settings {
-	/** Whether to include lint rules for TypeScript projects */
-	typescript?: boolean;
-}
-
-/** @returns Customizable ESLint configuration */
-export default function eslintConfig(settings?: Settings): ConfigObject[] {
+/** @returns ESLint configuration for TypeScript projects */
+export default function eslintConfig(): ConfigObject[] {
 	return defineConfig(
 		javascript(),
 		typescript(),

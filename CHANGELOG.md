@@ -13,7 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- **Breaking:** remove `react` option and configurations ([#326](https://github.com/JstnMcBrd/eslint-config/pull/326))
+- **Breaking:** remove React lint rules and docs ([#326](https://github.com/JstnMcBrd/eslint-config/pull/326))
+- **Breaking:** remove all `eslintConfig` function settings ([#326](https://github.com/JstnMcBrd/eslint-config/pull/326), [#328](https://github.com/JstnMcBrd/eslint-config/pull/328))
 
 ## [3.0.0] - 2026-10-16
 
